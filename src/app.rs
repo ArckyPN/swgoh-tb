@@ -36,7 +36,23 @@ impl App {
 }
 
 impl eframe::App for App {
-    /// Called each time the UI needs repainting, which may be many times per second.
+    // TODO include native support
+    #[cfg(not(target_arch = "wasm32"))]
+    fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
+        let _: &Units = &self.units;
+        let _: &Teams = &self.teams;
+        let _: &String = &self.search;
+        egui::CentralPanel::default().show(ctx, |ui| {
+            ui.label("currently only wasm32 is supported");
+
+            ui.with_layout(egui::Layout::bottom_up(egui::Align::LEFT), |ui| {
+                powered_by_egui_and_eframe(ui);
+                egui::warn_if_debug_build(ui);
+            });
+        });
+    }
+
+    #[cfg(target_arch = "wasm32")]
     fn update(&mut self, ctx: &egui::Context, frame: &mut eframe::Frame) {
         egui::TopBottomPanel::top("top_panel")
             .show(ctx, |ui| ui.heading("Rise of the Empire TB Team setup"));
