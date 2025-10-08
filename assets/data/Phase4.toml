@@ -1,0 +1,26 @@
+[Dark]
+name = ""
+
+[[Dark.mission]]
+id = ""
+name = ""
+team = [""]
+note = ""
+
+[Mixed]
+name = ""
+
+[[Mixed.mission]]
+id = ""
+name = ""
+team = [""]
+note = ""
+
+[Light]
+name = ""
+
+[[Light.mission]]
+id = ""
+name = ""
+team = [""]
+note = ""

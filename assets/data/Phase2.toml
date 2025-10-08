@@ -1,0 +1,26 @@
+[Dark]
+name = "Geonosis"
+
+[[Dark.mission]]
+id = ""
+name = ""
+team = [""]
+note = ""
+
+[Mixed]
+name = "Felucia"
+
+[[Mixed.mission]]
+id = ""
+name = ""
+team = [""]
+note = ""
+
+[Light]
+name = "Bracca"
+
+[[Light.mission]]
+id = ""
+name = ""
+team = [""]
+note = ""

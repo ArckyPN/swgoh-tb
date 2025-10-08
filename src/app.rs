@@ -1,94 +1,90 @@
-/// We derive Deserialize/Serialize so we can persist app state on shutdown.
-#[derive(serde::Deserialize, serde::Serialize)]
-#[serde(default)] // if we add new fields, give them default values when deserializing old state
-pub struct TemplateApp {
-    // Example stuff:
-    label: String,
+use crate::{Teams, Units};
 
-    #[serde(skip)] // This how you opt-out of serialization of a field
-    value: f32,
+pub struct App {
+    units: Units,
+    teams: Teams,
+    search: String,
 }
 
-impl Default for TemplateApp {
+// TODO replace the images in assets/ with custom made ones (adjust in manifest.json and index.html and check if used in other locations)
+
+impl Default for App {
     fn default() -> Self {
+        let units = toml::from_slice(include_bytes!("../assets/data/Units.toml"))
+            .expect("failed to load units");
+
+        let teams = Teams::load();
+
         Self {
-            // Example stuff:
-            label: "Hello World!".to_owned(),
-            value: 2.7,
+            units,
+            teams,
+            search: Default::default(),
         }
     }
 }
 
-impl TemplateApp {
+impl App {
     /// Called once before the first frame.
     pub fn new(cc: &eframe::CreationContext<'_>) -> Self {
         // This is also where you can customize the look and feel of egui using
         // `cc.egui_ctx.set_visuals` and `cc.egui_ctx.set_fonts`.
+        egui_extras::install_image_loaders(&cc.egui_ctx);
+        // cc.egui_ctx.add_image_loader(loader);
 
-        // Load previous app state (if any).
-        // Note that you must enable the `persistence` feature for this to work.
-        if let Some(storage) = cc.storage {
-            eframe::get_value(storage, eframe::APP_KEY).unwrap_or_default()
-        } else {
-            Default::default()
-        }
+        Default::default()
     }
 }
 
-impl eframe::App for TemplateApp {
-    /// Called by the framework to save state before shutdown.
-    fn save(&mut self, storage: &mut dyn eframe::Storage) {
-        eframe::set_value(storage, eframe::APP_KEY, self);
-    }
-
+impl eframe::App for App {
     /// Called each time the UI needs repainting, which may be many times per second.
-    fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
-        // Put your widgets into a `SidePanel`, `TopBottomPanel`, `CentralPanel`, `Window` or `Area`.
-        // For inspiration and more examples, go to https://emilk.github.io/egui
-
-        egui::TopBottomPanel::top("top_panel").show(ctx, |ui| {
-            // The top panel is often a good place for a menu bar:
-
-            egui::MenuBar::new().ui(ui, |ui| {
-                // NOTE: no File->Quit on web pages!
-                let is_web = cfg!(target_arch = "wasm32");
-                if !is_web {
-                    ui.menu_button("File", |ui| {
-                        if ui.button("Quit").clicked() {
-                            ctx.send_viewport_cmd(egui::ViewportCommand::Close);
-                        }
-                    });
-                    ui.add_space(16.0);
-                }
-
-                egui::widgets::global_theme_preference_buttons(ui);
-            });
-        });
+    fn update(&mut self, ctx: &egui::Context, frame: &mut eframe::Frame) {
+        egui::TopBottomPanel::top("top_panel")
+            .show(ctx, |ui| ui.heading("Rise of the Empire TB Team setup"));
 
         egui::CentralPanel::default().show(ctx, |ui| {
-            // The central panel the region left after adding TopPanel's and SidePanel's
-            ui.heading("eframe template");
+            egui::ScrollArea::vertical().show(ui, |ui| {
+                let origin = &frame.info().web_info.location.origin;
+                // TODO remove
+                ui.label(origin.clone());
 
-            ui.horizontal(|ui| {
-                ui.label("Write something: ");
-                ui.text_edit_singleline(&mut self.label);
-            });
+                ui.group(|ui| {
+                    ui.horizontal(|ui| {
+                        ui.label("Search:");
+                        ui.text_edit_singleline(&mut self.search);
+                        if ui.button("Clear").clicked() {
+                            self.search = String::new();
+                        }
+                    });
+                    ui.vertical(|ui| {
+                        if !self.search.is_empty() {
+                            let teams = self.teams.search(&self.search);
+                            for (idx, mission) in teams.iter().enumerate() {
+                                if idx > 0 {
+                                    ui.separator();
+                                }
+                                mission.render(ui, &self.units, origin);
+                            }
+                        }
+                    });
+                });
 
-            ui.add(egui::Slider::new(&mut self.value, 0.0..=10.0).text("value"));
-            if ui.button("Increment").clicked() {
-                self.value += 1.0;
-            }
+                for (idx, phase) in self.teams.phases.iter().enumerate() {
+                    ui.collapsing(format!("Phase {}", idx + 1), |ui| {
+                        phase.render(ui, &self.units, origin);
+                    });
+                }
 
-            ui.separator();
+                ui.separator();
 
-            ui.add(egui::github_link_file!(
-                "https://github.com/emilk/eframe_template/blob/main/",
-                "Source code."
-            ));
+                ui.add(egui::github_link_file!(
+                    "https://github.com/ArckyPN/swgoh-tb",
+                    "Source code."
+                ));
 
-            ui.with_layout(egui::Layout::bottom_up(egui::Align::LEFT), |ui| {
-                powered_by_egui_and_eframe(ui);
-                egui::warn_if_debug_build(ui);
+                ui.with_layout(egui::Layout::bottom_up(egui::Align::LEFT), |ui| {
+                    powered_by_egui_and_eframe(ui);
+                    egui::warn_if_debug_build(ui);
+                });
             });
         });
     }

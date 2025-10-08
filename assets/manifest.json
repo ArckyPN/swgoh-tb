@@ -1,6 +1,6 @@
 {
-  "name": "egui Template PWA",
-  "short_name": "egui-template-pwa",
+  "name": "SWGOH Rise of the Empire TB teams",
+  "short_name": "swgoh-roe-teams",
   "icons": [
     {
       "src": "./assets/icon-256.png",
@@ -20,7 +20,7 @@
     }
   ],
   "lang": "en-US",
-  "id": "/index.html",
+  "id": "https://arckypn.github.io/swgoh-tb/",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "white",

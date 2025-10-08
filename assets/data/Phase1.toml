@@ -1,0 +1,128 @@
+[Dark]
+name = "Mustafar"
+
+[[Dark.mission]]
+id = "P1DLV"
+name = "Lord Vader Combat Mission"
+team = ["LV"]
+note = "Full Auto"
+
+[[Dark.mission]]
+id = "P1DCM1"
+name = "Left Combat Mission"
+team = [ "SEE", "Malak", "DR", "SASS", "Wat" ]
+note = "Full Auto"
+
+[[Dark.mission]]
+id = "P1DCM2"
+name = "Top Combat Mission"
+team = [ "SLKR", "DRey", "KRU", "ST", "Hux" ]
+note = "Poke Droideka, then Full Auto"
+
+[[Dark.mission]]
+id = "P1DCM3"
+name = "Right Combat Mission"
+team = [ "Reva", "GI", "7S", "8B", "5B" ]
+note = "Full Auto"
+
+[[Dark.mission]]
+id = "P1DF"
+name = "Fleet"
+team = [ "Leviathan", "Scythe", "SithBomber", "MK6", "SithFighter", "TieAdvanced", "Scimitar" ]
+note = "full auto, highly inconsistent"
+
+[[Dark.mission]]
+id = "P1DF"
+name = "Fleet"
+team = [ "Executrix", "Scythe", "MK6", "TieAdvanced", "TDC", "TieInterceptor", "Gauntlet", "Lambda" ]
+note = "manual"
+
+[[Dark.mission]]
+id = "P1DF"
+name = "Fleet"
+team = [ "Executrix", "Scythe", "SithFighter", "TieAdvanced", "TDC", "TieInterceptor", "Gauntlet", "Lambda" ]
+note = "manual"
+
+[Mixed]
+name = "Corellia"
+
+[[Mixed.mission]]
+id = "P1MJ"
+name = "Jabba Combat Mission"
+team = [ "Jabba", "Krrsantan", "Boushh", "Boba", "Skiff" ]
+note = "Full Auto"
+
+[[Mixed.mission]]
+id = "P1MA"
+name = "Aphra Combat Mission"
+team = [ "Aphra", "Rey", "JTR", "bb8", "ben" ]
+note = "Full Auto"
+
+[[Mixed.mission]]
+id = "P1MCM"
+name = "Combat Mission"
+team = [ "bkm", "bando", "paz", "ogBo", "ig12" ]
+note = "full auto"
+
+[[Mixed.mission]]
+id = "P1MSM"
+name = "Qi'ra Special Mission"
+team = [ "qira", "yhs", "r2", "drogan", "leia" ]
+note = "Full Auto"
+
+[[Mixed.mission]]
+id = "P1MF"
+name = "Fleet"
+team = [ "Executor", "ht", "p1", "xb", "s1", "ig2000" ]
+note = "Full Auto"
+
+[[Mixed.mission]]
+id = "P1MF"
+name = "Fleet"
+team = [ "Executor", "ht", "p1", "rc", "xb", "s1", "ig2000" ]
+note = "Full Auto"
+
+[Light]
+name = "Coruscant"
+
+[[Light.mission]]
+id = "P1LMace"
+name = "Mace + Kit Combat Mission"
+team = [ "mw", "jmk", "gas", "snips", "fisto" ]
+note = "Full Auto"
+
+[[Light.mission]]
+id = "P1LJedi"
+name = "Jedi Combat Mission"
+team = [ "jml", "jkl", "hoda", "gmy", "jkr" ]
+note = "Full Auto"
+
+[[Light.mission]]
+id = "P1LCM"
+name = "Combat Mission"
+team = [ "at", "psw", "ebe", "huyang", "GenSyn" ]
+note = "Full Auto"
+
+[[Light.mission]]
+id = "P1LCM"
+name = "Combat Mission"
+team = [ "bmf", "depa", "tg", "jocasta", "aayla" ]
+note = "Full Auto"
+
+[[Light.mission]]
+id = "P1LF"
+name = "Fleet"
+team = [ "Profundity", "outrider", "milf", "ywingR", "ghost", "phantom", "r1" ]
+note = "Full Auto"
+
+[[Light.mission]]
+id = "P1LF"
+name = "Fleet"
+team = [ "Raddus", "outrider", "ResBomber", "PoeX", "ResX", "Comeuppance" ]
+note = "Full Auto"
+
+[[Light.mission]]
+id = "P1LF"
+name = "Fleet"
+team = [ "Negotiator", "outrider", "jkaShip", "Marauder", "ywingGR", "snipsShip", "fivesShip" ]
+note = "Full Auto"

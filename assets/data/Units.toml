@@ -1,0 +1,62 @@
+[[Unit]]
+id = "malak"
+name = "Darth Malak"
+image = "tex.charui_darthmalak.webp"
+
+[[Unit]]
+id = "dr"
+name = "Darth Revan"
+image = "tex.charui_sithrevan.webp"
+
+[[Unit]]
+id = "sass"
+name = "Sith Assassin"
+image = "tex.charui_sithassassin.webp"
+
+[[Unit]]
+id = "see"
+name = "Sith Eternal Emperor"
+image = "tex.charui_espalpatine_pre.webp"
+
+[[Unit]]
+id = "wat"
+name = "Wat Tambor"
+image = "tex.charui_wattambor.webp"
+
+# TODO sort units in correct alphabetically order!
+[[Unit]]
+id = "jkr"
+name = "Jedi Knight Revan"
+image = "// TODO"
+
+[[Unit]]
+id = "jabba"
+name = "Jabba the Hutt"
+image = "https://game-assets.swgoh.gg/textures/tex.charui_jabbathehutt.png"
+
+[[Unit]]
+id = "boushh"
+name = "Boushh (Leia Organa)"
+image = "https://game-assets.swgoh.gg/textures/tex.charui_boushh.png"
+
+[[Unit]]
+id = "skiff"
+name = "Skiff Guard (Lando Calrissian)"
+image = "https://game-assets.swgoh.gg/textures/tex.charui_undercoverlando.png"
+
+[[Unit]]
+id = "krrsantan"
+name = "Krrsantan"
+image = "https://game-assets.swgoh.gg/textures/tex.charui_krrsantan.png"
+
+[[Unit]]
+id = "boba"
+name = "Boba Fett"
+image = "https://game-assets.swgoh.gg/textures/tex.charui_bobafett.png"
+
+# final unit is a placeholder in case I forgot to add a specific unit
+[[Unit]]
+id = "[PH]"
+name = "TODO: add unit"
+image = "missing.png"
+# ! do NOT add any other unit beyond this

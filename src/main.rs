@@ -25,7 +25,7 @@ fn main() {
             .start(
                 canvas,
                 web_options,
-                Box::new(|cc| Ok(Box::new(swgoh_tb::TemplateApp::new(cc)))),
+                Box::new(|cc| Ok(Box::new(swgoh_tb::App::new(cc)))),
             )
             .await;
 
