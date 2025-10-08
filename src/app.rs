@@ -59,9 +59,13 @@ impl eframe::App for App {
 
         egui::CentralPanel::default().show(ctx, |ui| {
             egui::ScrollArea::vertical().show(ui, |ui| {
-                let origin = &frame.info().web_info.location.origin;
+                let origin = if frame.info().web_info.location.url.contains("dev") {
+                    &frame.info().web_info.location.origin
+                } else {
+                    &frame.info().web_info.location.url
+                };
                 // TODO remove
-                ui.label(origin.clone());
+                ui.label(format!("{:#?}", frame.info().web_info));
 
                 ui.group(|ui| {
                     ui.horizontal(|ui| {
