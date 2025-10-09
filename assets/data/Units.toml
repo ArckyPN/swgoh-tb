@@ -1,62 +1,1884 @@
 [[Unit]]
-id = "malak"
-name = "Darth Malak"
-image = "tex.charui_darthmalak.webp"
+id = "trip"
+name = "0-0-0"
+image = "tex.charui_triplezero.png"
 
 [[Unit]]
-id = "dr"
-name = "Darth Revan"
-image = "tex.charui_sithrevan.webp"
+id = "sortie"
+name = "50R-T"
+image = "tex.charui_50rt.png"
 
 [[Unit]]
-id = "sass"
-name = "Sith Assassin"
-image = "tex.charui_sithassassin.webp"
+id = "arc"
+name = "ARC Trooper"
+image = "tex.charui_trooperclone_arc.png"
 
 [[Unit]]
-id = "see"
-name = "Sith Eternal Emperor"
-image = "tex.charui_espalpatine_pre.webp"
+id = "aayla"
+name = "Aayla Secura"
+image = "tex.charui_aaylasecura.png"
 
 [[Unit]]
-id = "wat"
-name = "Wat Tambor"
-image = "tex.charui_wattambor.webp"
-
-# TODO sort units in correct alphabetically order!
-[[Unit]]
-id = "jkr"
-name = "Jedi Knight Revan"
-image = "// TODO"
+id = "snackbar"
+name = "Admiral Ackbar"
+image = "tex.charui_ackbaradmiral.png"
 
 [[Unit]]
-id = "jabba"
-name = "Jabba the Hutt"
-image = "https://game-assets.swgoh.gg/textures/tex.charui_jabbathehutt.png"
+id = "piett"
+name = "Admiral Piett"
+image = "tex.charui_piett.png"
 
 [[Unit]]
-id = "boushh"
-name = "Boushh (Leia Organa)"
-image = "https://game-assets.swgoh.gg/textures/tex.charui_boushh.png"
+id = "adRad"
+name = "Admiral Raddus"
+image = "tex.charui_admiralraddus.png"
 
 [[Unit]]
-id = "skiff"
-name = "Skiff Guard (Lando Calrissian)"
-image = "https://game-assets.swgoh.gg/textures/tex.charui_undercoverlando.png"
+id = "trench"
+name = "Admiral Trench"
+image = "tex.charui_admiraltrench.png"
 
 [[Unit]]
-id = "krrsantan"
-name = "Krrsantan"
-image = "https://game-assets.swgoh.gg/textures/tex.charui_krrsantan.png"
+id = "glat"
+name = "Ahsoka Tano"
+image = "tex.charui_ahsokatanogray.png"
+
+[[Unit]]
+id = "fulcrum"
+name = "Ahsoka Tano (Fulcrum)"
+image = "tex.charui_ahsokaadult.png"
+
+[[Unit]]
+id = "snips"
+name = "Ahsoka Tano (Snips)"
+image = "tex.charui_ahsoka.png"
+
+[[Unit]]
+id = "snipShip"
+name = "Ahsoka Tano's Jedi Starfighter"
+image = "tex.charui_jedi_fighter_ahsoka.png"
+
+[[Unit]]
+id = "holdo"
+name = "Amilyn Holdo"
+image = "tex.charui_holdo.png"
+
+[[Unit]]
+id = "jkaShip"
+name = "Anakin's Eta-2 Starfighter"
+image = "tex.charui_jedi_fighter_anakin.png"
+
+[[Unit]]
+id = "asajj"
+name = "Asajj Ventress"
+image = "tex.charui_ventress.png"
+
+[[Unit]]
+id = "aurra"
+name = "Aurra Sing"
+image = "tex.charui_aurrasing.png"
+
+[[Unit]]
+id = "b28"
+name = "B-28 Extinction-class Bomber"
+image = "tex.charui_b28extinctionclassbomber.png"
+
+[[Unit]]
+id = "b1"
+name = "B1 Battle Droid"
+image = "tex.charui_b1.png"
+
+[[Unit]]
+id = "b2"
+name = "B2 Super Battle Droid"
+image = "tex.charui_b2.png"
+
+[[Unit]]
+id = "bb8"
+name = "BB-8"
+image = "tex.charui_bb8.png"
+
+[[Unit]]
+id = "bt1"
+name = "BT-1"
+image = "tex.charui_bt1.png"
+
+[[Unit]]
+id = "ywing"
+name = "BTL-B Y-wing Starfighter"
+image = "tex.charui_ywing_btlb.png"
+
+[[Unit]]
+id = "barriss"
+name = "Barriss Offee"
+image = "tex.charui_barriss_light.png"
+
+[[Unit]]
+id = "bastilla"
+name = "Bastila Shan"
+image = "tex.charui_bastilashan.png"
+
+[[Unit]]
+id = "badstilla"
+name = "Bastila Shan (Fallen)"
+image = "tex.charui_bastilashan_dark.png"
+
+[[Unit]]
+id = "batcher"
+name = "Batcher"
+image = "tex.charui_batcher.png"
+
+[[Unit]]
+id = "baylan"
+name = "Baylan Skoll"
+image = "tex.charui_baylanskoll.png"
+
+[[Unit]]
+id = "baze"
+name = "Baze Malbus"
+image = "tex.charui_bazemalbus.png"
+
+[[Unit]]
+id = "ben"
+name = "Ben Solo"
+image = "tex.charui_bensolo.png"
+
+[[Unit]]
+id = "biggs"
+name = "Biggs Darklighter"
+image = "tex.charui_rebelpilot_biggs.png"
+
+[[Unit]]
+id = "biggsShip"
+name = "Biggs Darklighter's X-wing"
+image = "tex.charui_xwing_red3.png"
+
+[[Unit]]
+id = "bistan"
+name = "Bistan"
+image = "tex.charui_bistan.png"
+
+[[Unit]]
+id = "bistanShip"
+name = "Bistan's U-wing"
+image = "tex.charui_uwing.png"
+
+[[Unit]]
+id = "bkm"
+name = "Bo-Katan (Mand'alor)"
+image = "tex.charui_mandalorbokatan.png"
+
+[[Unit]]
+id = "bo"
+name = "Bo-Katan Kryze"
+image = "tex.charui_bokatan.png"
 
 [[Unit]]
 id = "boba"
 name = "Boba Fett"
-image = "https://game-assets.swgoh.gg/textures/tex.charui_bobafett.png"
+image = "tex.charui_bobafett.png"
 
-# final unit is a placeholder in case I forgot to add a specific unit
+[[Unit]]
+id = "dadbod"
+name = "Boba Fett, Scion of Jango"
+image = "tex.charui_bobafettold.png"
+
+[[Unit]]
+id = "bodhi"
+name = "Bodhi Rook"
+image = "tex.charui_bodhi.png"
+
+[[Unit]]
+id = "boss"
+name = "Boss Nass"
+image = "tex.charui_bossnass.png"
+
+[[Unit]]
+id = "bossk"
+name = "Bossk"
+image = "tex.charui_bossk.png"
+
+[[Unit]]
+id = "boushh"
+name = "Boushh (Leia Organa)"
+image = "tex.charui_boushh.png"
+
+[[Unit]]
+id = "brutus"
+name = "Brutus"
+image = "tex.charui_brutus.png"
+
+[[Unit]]
+id = "c3po"
+name = "C-3PO"
+image = "tex.charui_c3p0.png"
+
+[[Unit]]
+id = "appo"
+name = 'CC-1119 "Appo"'
+image = "tex.charui_appo.png"
+
+[[Unit]]
+id = "cody"
+name = 'CC-2224 "Cody"'
+image = "tex.charui_trooperclone_cody.png"
+
+[[Unit]]
+id = "echo"
+name = 'CT-21-0408 "Echo"'
+image = "tex.charui_trooperclone_echo.png"
+
+[[Unit]]
+id = "fives"
+name = 'CT-5555 "Fives"'
+image = "tex.charui_trooperclone_fives.png"
+
+[[Unit]]
+id = "rex"
+name = 'CT-7567 "Rex"'
+image = "tex.charui_trooperclone_rex.png"
+
+[[Unit]]
+id = "cx2"
+name = "CX-2"
+image = "tex.charui_operative.png"
+
+[[Unit]]
+id = "cad"
+name = "Cad Bane"
+image = "tex.charui_cadbane.png"
+
+[[Unit]]
+id = "cal"
+name = "Cal Kestis"
+image = "tex.charui_calkestis.png"
+
+[[Unit]]
+id = "candy"
+name = "Canderous Ordo"
+image = "tex.charui_canderous.png"
+
+[[Unit]]
+id = "drogan"
+name = "Captain Drogan"
+image = "tex.charui_captaindrogan.png"
+
+[[Unit]]
+id = "enoch"
+name = "Captain Enoch"
+image = "tex.charui_captainenoch.png"
+
+[[Unit]]
+id = "cptHan"
+name = "Captain Han Solo"
+image = "tex.charui_hoth_han.png"
+
+[[Unit]]
+id = "ithano"
+name = "Captain Ithano"
+image = "tex.charui_ithano.png"
+
+[[Unit]]
+id = "phasma"
+name = "Captain Phasma"
+image = "tex.charui_phasma.png"
+
+[[Unit]]
+id = "oldRex"
+name = "Captain Rex"
+image = "tex.charui_captainrex.png"
+
+[[Unit]]
+id = "silvo"
+name = "Captain Silvo"
+image = "tex.charui_captainsilvo.png"
+
+[[Unit]]
+id = "tarpals"
+name = "Captain Tarpals"
+image = "tex.charui_captaintarpals.png"
+
+[[Unit]]
+id = "cancelled"
+name = "Cara Dune"
+image = "tex.charui_caradune.png"
+
+[[Unit]]
+id = "carth"
+name = "Carth Onasi"
+image = "tex.charui_carth.png"
+
+[[Unit]]
+id = "andor"
+name = "Cassian Andor"
+image = "tex.charui_cassian.png"
+
+[[Unit]]
+id = "andorShip"
+name = "Cassian's U-wing"
+image = "tex.charui_uwing_hero.png"
+
+[[Unit]]
+id = "cere"
+name = "Cere Junda"
+image = "tex.charui_cerejunda.png"
+
+[[Unit]]
+id = "chewie"
+name = "Chewbacca"
+image = "tex.charui_chewbacca_ot.png"
+
+[[Unit]]
+id = "chirpa"
+name = "Chief Chirpa"
+image = "tex.charui_ewok_chirpa.png"
+
+[[Unit]]
+id = "nebit"
+name = "Chief Nebit"
+image = "tex.charui_jawa_nebit.png"
+
+[[Unit]]
+id = "chimaera"
+name = "Chimaera"
+image = "tex.charui_chimaera.png"
+
+[[Unit]]
+id = "chirrut"
+name = "Chirrut Îmwe"
+image = "tex.charui_chirrut.png"
+
+[[Unit]]
+id = "GenevaConventionViolator"
+name = "Chopper"
+image = "tex.charui_chopper.png"
+
+[[Unit]]
+id = "hevy"
+name = "Clone Sergeant - Phase I"
+image = "tex.charui_trooperclonegreen.png"
+
+[[Unit]]
+id = "sargeShip"
+name = "Clone Sergeant's ARC-170"
+image = "tex.charui_arc170.png"
+
+[[Unit]]
+id = "cwc"
+name = "Clone Wars Chewbacca"
+image = "tex.charui_chewbacca.png"
+
+[[Unit]]
+id = "starck"
+name = "Colonel Starck"
+image = "tex.charui_colonel_stark.png"
+
+[[Unit]]
+id = "zoriiShip"
+name = "Comeuppance"
+image = "tex.charui_comeuppance.png"
+
+[[Unit]]
+id = "cat"
+name = "Commander Ahsoka Tano"
+image = "tex.charui_commanderahsokatano.png"
+
+[[Unit]]
+id = "cls"
+name = "Commander Luke Skywalker"
+image = "tex.charui_lukebespin.png"
+
+[[Unit]]
+id = "cup"
+name = "Coruscant Underworld Police"
+image = "tex.charui_coruscantpolice.png"
+
+[[Unit]]
+id = "dooku"
+name = "Count Dooku"
+image = "tex.charui_dooku.png"
+
+[[Unit]]
+id = "crosshair"
+name = "Crosshair (Scarred)"
+image = "tex.charui_crosshair_scarred.png"
+
+[[Unit]]
+id = "dark"
+name = "Dark Trooper"
+image = "tex.charui_darktrooper.png"
+
+[[Unit]]
+id = "dtmg"
+name = "Dark Trooper Moff Gideon"
+image = "tex.charui_moffgideons3.png"
+
+[[Unit]]
+id = "bane"
+name = "Darth Bane"
+image = "tex.charui_darthbane.png"
+
+[[Unit]]
+id = "malak"
+name = "Darth Malak"
+image = "tex.charui_darthmalak.png"
+
+[[Unit]]
+id = "malgus"
+name = "Darth Malgus"
+image = "tex.charui_darthmalgus.png"
+
+[[Unit]]
+id = "ogMaul"
+name = "Darth Maul"
+image = "tex.charui_maul.png"
+
+[[Unit]]
+id = "hungryBoii"
+name = "Darth Nihilus"
+image = "tex.charui_nihilus.png"
+
+[[Unit]]
+id = "revan"
+name = "Darth Revan"
+image = "tex.charui_sithrevan.png"
+
+[[Unit]]
+id = "sidious"
+name = "Darth Sidious"
+image = "tex.charui_sidious.png"
+
+[[Unit]]
+id = "angryBoii"
+name = "Darth Sion"
+image = "tex.charui_sion.png"
+
+[[Unit]]
+id = "talon"
+name = "Darth Talon"
+image = "tex.charui_darthtalon.png"
+
+[[Unit]]
+id = "traya"
+name = "Darth Traya"
+image = "tex.charui_traya.png"
+
+[[Unit]]
+id = "vader"
+name = "Darth Vader"
+image = "tex.charui_vader.png"
+
+[[Unit]]
+id = "dash"
+name = "Dash Rendar"
+image = "tex.charui_dashrendar.png"
+
+[[Unit]]
+id = "dathcha"
+name = "Dathcha"
+image = "tex.charui_jawa_dathcha.png"
+
+[[Unit]]
+id = "death"
+name = "Death Trooper"
+image = "tex.charui_trooperdeath.png"
+
+[[Unit]]
+id = "dtp"
+name = "Death Trooper (Peridea)"
+image = "tex.charui_deathtrooperperidea.png"
+
+[[Unit]]
+id = "dengar"
+name = "Dengar"
+image = "tex.charui_dengar.png"
+
+[[Unit]]
+id = "depa"
+name = "Depa Billaba"
+image = "tex.charui_depabillaba.png"
+
+[[Unit]]
+id = "krennic"
+name = "Director Krennic"
+image = "tex.charui_krennic.png"
+
+[[Unit]]
+id = "dct"
+name = "Disguised Clone Trooper"
+image = "tex.charui_disguisedclonetrooper.png"
+
+[[Unit]]
+id = "aphra"
+name = "Doctor Aphra"
+image = "tex.charui_doctoraphra.png"
+
+[[Unit]]
+id = "ddk"
+name = "Droideka"
+image = "tex.charui_droideka.png"
+
+[[Unit]]
+id = "carthShip"
+name = "Ebon Hawk"
+image = "tex.charui_ebonhawk.png"
+
+[[Unit]]
+id = "bbEcho"
+name = "Echo"
+image = "tex.charui_bb_echo.png"
+
+[[Unit]]
+id = "eeth"
+name = "Eeth Koth"
+image = "tex.charui_eethkoth.png"
+
+[[Unit]]
+id = "8bro"
+name = "Eighth Brother"
+image = "tex.charui_eighthbrother.png"
+
+[[Unit]]
+id = "embo"
+name = "Embo"
+image = "tex.charui_embo.png"
+
+[[Unit]]
+id = "palp"
+name = "Emperor Palpatine"
+image = "tex.charui_palpatineemperor.png"
+
+[[Unit]]
+id = "palpMobil"
+name = "Emperor's Shuttle"
+image = "tex.charui_imperialshuttle.png"
+
+[[Unit]]
+id = "endurance"
+name = "Endurance"
+image = "tex.charui_venator.png"
+
+[[Unit]]
+id = "nest"
+name = "Enfys Nest"
+image = "tex.charui_enfys.png"
+
+[[Unit]]
+id = "ewokE"
+name = "Ewok Elder"
+image = "tex.charui_ewok_chief.png"
+
+[[Unit]]
+id = "ewokS"
+name = "Ewok Scout"
+image = "tex.charui_ewok_scout.png"
+
+[[Unit]]
+id = "exec"
+name = "Executor"
+image = "tex.charui_executor.png"
+
+[[Unit]]
+id = "executrix"
+name = "Executrix"
+image = "tex.charui_stardestroyer.png"
+
+[[Unit]]
+id = "ezra"
+name = "Ezra Bridger"
+image = "tex.charui_ezra_s3.png"
+
+[[Unit]]
+id = "theBetterEzra"
+name = "Ezra Bridger (Exile)"
+image = "tex.charui_ezraexile.png"
+
+[[Unit]]
+id = "fennec"
+name = "Fennec Shand"
+image = "tex.charui_fennec.png"
+
+[[Unit]]
+id = "5bro"
+name = "Fifth Brother"
+image = "tex.charui_fifthbrother.png"
+
+[[Unit]]
+id = "finalizer"
+name = "Finalizer"
+image = "tex.charui_finalizer.png"
+
+[[Unit]]
+id = "fn2187"
+name = "Finn"
+image = "tex.charui_finnjakku.png"
+
+[[Unit]]
+id = "fox"
+name = "First Order Executioner"
+image = "tex.charui_firstorder_executioner.png"
+
+[[Unit]]
+id = "foo"
+name = "First Order Officer"
+image = "tex.charui_firstorderofficer.png"
+
+[[Unit]]
+id = "foSFf"
+name = "First Order SF TIE Fighter"
+image = "tex.charui_fosf_tie_fighter.png"
+
+[[Unit]]
+id = "foSFp"
+name = "First Order SF TIE Pilot"
+image = "tex.charui_firstorder_pilot.png"
+
+[[Unit]]
+id = "fos"
+name = "First Order Stormtrooper"
+image = "tex.charui_firstordertrooper.png"
+
+[[Unit]]
+id = "fof"
+name = "First Order TIE Fighter"
+image = "tex.charui_firstorder_tiefighter.png"
+
+[[Unit]]
+id = "fop"
+name = "First Order TIE Pilot"
+image = "tex.charui_firstordertiepilot.png"
+
+[[Unit]]
+id = "malgusShip"
+name = "Fury-class Interceptor"
+image = "tex.charui_furyclassinterceptor.png"
+
+[[Unit]]
+id = "pig"
+name = "Gamorrean Guard"
+image = "tex.charui_gamorreanguard.png"
+
+[[Unit]]
+id = "suckxon"
+name = "Gar Saxon"
+image = "tex.charui_gar_saxon.png"
+
+[[Unit]]
+id = "zeb"
+name = 'Garazeb "Zeb" Orrelios'
+image = "tex.charui_zeb_s3.png"
+
+[[Unit]]
+id = "gauntlet"
+name = "Gauntlet Starfighter"
+image = "tex.charui_gauntlet.png"
+
+[[Unit]]
+id = "gg"
+name = "General Grievous"
+image = "tex.charui_grievous.png"
+
+[[Unit]]
+id = "hux"
+name = "General Hux"
+image = "tex.charui_generalhux.png"
+
+[[Unit]]
+id = "gk"
+name = "General Kenobi"
+image = "tex.charui_obiwangeneral.png"
+
+[[Unit]]
+id = "gas"
+name = "General Skywalker"
+image = "tex.charui_generalanakin.png"
+
+[[Unit]]
+id = "genSyn"
+name = "General Syndulla"
+image = "tex.charui_generalsyndulla.png"
+
+[[Unit]]
+id = "veers"
+name = "General Veers"
+image = "tex.charui_veers.png"
+
+[[Unit]]
+id = "gba"
+name = "Geonosian Brood Alpha"
+image = "tex.charui_geonosian_broodalpha.png"
+
+[[Unit]]
+id = "geoSo"
+name = "Geonosian Soldier"
+image = "tex.charui_geonosian_soldier.png"
+
+[[Unit]]
+id = "geoSoShip"
+name = "Geonosian Soldier's Starfighter"
+image = "tex.charui_geonosis_fighter_soldier.png"
+
+[[Unit]]
+id = "geoSpy"
+name = "Geonosian Spy"
+image = "tex.charui_geonosian_spy.png"
+
+[[Unit]]
+id = "geoSpyShip"
+name = "Geonosian Spy's Starfighter"
+image = "tex.charui_geonosis_fighter_spy.png"
+
+[[Unit]]
+id = "ghost"
+name = "Ghost"
+image = "tex.charui_ghost.png"
+
+[[Unit]]
+id = "thrawn"
+name = "Grand Admiral Thrawn"
+image = "tex.charui_thrawn.png"
+
+[[Unit]]
+id = "1bro"
+name = "Grand Inquisitor"
+image = "tex.charui_grandinquisitor.png"
+
+[[Unit]]
+id = "gmy"
+name = "Grand Master Yoda"
+image = "tex.charui_yodagrandmaster.png"
+
+[[Unit]]
+id = "tarkin"
+name = "Grand Moff Tarkin"
+image = "tex.charui_tarkinadmiral.png"
+
+[[Unit]]
+id = "gm"
+name = "Great Mothers"
+image = "tex.charui_greatmothers.png"
+
+[[Unit]]
+id = "greedo"
+name = "Greedo"
+image = "tex.charui_greedo.png"
+
+[[Unit]]
+id = "greef"
+name = "Greef Karga"
+image = "tex.charui_greefkarga.png"
+
+[[Unit]]
+id = "booma"
+name = "Gungan Boomadier"
+image = "tex.charui_gunganboomadier.png"
+
+[[Unit]]
+id = "phalanx"
+name = "Gungan Phalanx"
+image = "tex.charui_gunganphalanx.png"
+
+[[Unit]]
+id = "hk47"
+name = "HK-47"
+image = "tex.charui_hk47.png"
+
+[[Unit]]
+id = "han"
+name = "Han Solo"
+image = "tex.charui_han.png"
+
+[[Unit]]
+id = "milf"
+name = "Han's Millennium Falcon"
+image = "tex.charui_mfalcon.png"
+
+[[Unit]]
+id = "hera"
+name = "Hera Syndulla"
+image = "tex.charui_hera_s3.png"
+
+[[Unit]]
+id = "hoda"
+name = "Hermit Yoda"
+image = "tex.charui_yodahermit.png"
+
+[[Unit]]
+id = "h1"
+name = "Home One"
+image = "tex.charui_moncalamarilibertycruiser.png"
+
+[[Unit]]
+id = "hondo"
+name = "Hondo Ohnaka"
+image = "tex.charui_hondoohnaka.png"
+
+[[Unit]]
+id = "hrs"
+name = "Hoth Rebel Scout"
+image = "tex.charui_rebelhothscout.png"
+
+[[Unit]]
+id = "theWorseHrs"
+name = "Hoth Rebel Soldier"
+image = "tex.charui_rebelhoth.png"
+
+[[Unit]]
+id = "ht"
+name = "Hound's Tooth"
+image = "tex.charui_houndstooth.png"
+
+[[Unit]]
+id = "hunter"
+name = "Hunter"
+image = "tex.charui_bb_hunter.png"
+
+[[Unit]]
+id = "hunterMerc"
+name = "Hunter (Mercenary)"
+image = "tex.charui_hunters3.png"
+
+[[Unit]]
+id = "huyang"
+name = "Huyang"
+image = "tex.charui_huyang.png"
+
+[[Unit]]
+id = "hyena"
+name = "Hyena Bomber"
+image = "tex.charui_hyenabomber.png"
+
+[[Unit]]
+id = "magna"
+name = "IG-100 MagnaGuard"
+image = "tex.charui_magnaguard.png"
+
+[[Unit]]
+id = "ig11"
+name = "IG-11"
+image = "tex.charui_ig11_nurse.png"
+
+[[Unit]]
+id = "ig12"
+name = "IG-12 &amp; Grogu"
+image = "tex.charui_ig12.png"
+
+[[Unit]]
+id = "ig2k"
+name = "IG-2000"
+image = "tex.charui_ig2000.png"
+
+[[Unit]]
+id = "ig86"
+name = "IG-86 Sentinel Droid"
+image = "tex.charui_ig86.png"
+
+[[Unit]]
+id = "ig88"
+name = "IG-88"
+image = "tex.charui_ig88.png"
+
+[[Unit]]
+id = "iden"
+name = "Iden Versio"
+image = "tex.charui_idenversioempire.png"
+
+[[Unit]]
+id = "igd"
+name = "Ima-Gun Di"
+image = "tex.charui_imagundi.png"
+
+[[Unit]]
+id = "ipd"
+name = "Imperial Probe Droid"
+image = "tex.charui_probedroid.png"
+
+[[Unit]]
+id = "isc"
+name = "Imperial Super Commando"
+image = "tex.charui_imperial_super_commando.png"
+
+[[Unit]]
+id = "itb"
+name = "Imperial TIE Bomber"
+image = "tex.charui_tiebomber.png"
+
+[[Unit]]
+id = "itf"
+name = "Imperial TIE Fighter"
+image = "tex.charui_tiefighter.png"
+
+[[Unit]]
+id = "jabba"
+name = "Jabba the Hutt"
+image = "tex.charui_jabbathehutt.png"
+
+[[Unit]]
+id = "jango"
+name = "Jango Fett"
+image = "tex.charui_jangofett.png"
+
+[[Unit]]
+id = "jarjar"
+name = "Jar Jar Binks"
+image = "tex.charui_jarjarbinks.png"
+
+[[Unit]]
+id = "jawa"
+name = "Jawa"
+image = "tex.charui_jawa_jawa.png"
+
+[[Unit]]
+id = "jawaE"
+name = "Jawa Engineer"
+image = "tex.charui_jawa_engineer.png"
+
+[[Unit]]
+id = "jawaS"
+name = "Jawa Scavenger"
+image = "tex.charui_jawa_scavenger.png"
+
+[[Unit]]
+id = "jc"
+name = "Jedi Consular"
+image = "tex.charui_jedi_consular_03.png"
+
+[[Unit]]
+id = "jcShip"
+name = "Jedi Consular's Starfighter"
+image = "tex.charui_jedi_fighter.png"
+
+[[Unit]]
+id = "jka"
+name = "Jedi Knight Anakin"
+image = "tex.charui_anakinknight.png"
+
+[[Unit]]
+id = "jkc"
+name = "Jedi Knight Cal Kestis"
+image = "tex.charui_jediknightcal.png"
+
+[[Unit]]
+id = "jkg"
+name = "Jedi Knight Guardian"
+image = "tex.charui_jedi_guardian_01.png"
+
+[[Unit]]
+id = "jkl"
+name = "Jedi Knight Luke Skywalker"
+image = "tex.charui_luke_jediknight.png"
+
+[[Unit]]
+id = "jkr"
+name = "Jedi Knight Revan"
+image = "tex.charui_jedirevan.png"
+
+[[Unit]]
+id = "jmk"
+name = "Jedi Master Kenobi"
+image = "tex.charui_globiwan.png"
+
+[[Unit]]
+id = "jml"
+name = "Jedi Master Luke Skywalker"
+image = "tex.charui_luke_jml.png"
+
+[[Unit]]
+id = "bamf"
+name = "Jedi Master Mace Windu"
+image = "tex.charui_jedimastermacewindu.png"
+
+[[Unit]]
+id = "jocasta"
+name = "Jocasta Nu"
+image = "tex.charui_jocastanu_blaster.png"
+
+[[Unit]]
+id = "jolee"
+name = "Jolee Bindo"
+image = "tex.charui_joleebindo.png"
+
+[[Unit]]
+id = "juhani"
+name = "Juhani"
+image = "tex.charui_juhani.png"
+
+[[Unit]]
+id = "jyn"
+name = "Jyn Erso"
+image = "tex.charui_jyn.png"
+
+[[Unit]]
+id = "k2so"
+name = "K-2SO"
+image = "tex.charui_k2so.png"
+
+[[Unit]]
+id = "kanan"
+name = "Kanan Jarrus"
+image = "tex.charui_kanan_s3.png"
+
+[[Unit]]
+id = "theBestMan"
+name = "Kelleran Beq"
+image = "tex.charui_kelleranbeq.png"
+
+[[Unit]]
+id = "kam"
+name = "Ki-Adi-Mundi"
+image = "tex.charui_kiadimundi.png"
+
+[[Unit]]
+id = "fisto"
+name = "Kit Fisto"
+image = "tex.charui_kitfisto.png"
+
+[[Unit]]
+id = "kix"
+name = "Kix"
+image = "tex.charui_kix.png"
+
+[[Unit]]
+id = "krrsantan"
+name = "Krrsantan"
+image = "tex.charui_krrsantan.png"
+
+[[Unit]]
+id = "kuill"
+name = "Kuiil"
+image = "tex.charui_kuiil.png"
+
+[[Unit]]
+id = "kyle"
+name = "Kyle Katarn"
+image = "tex.charui_kylekatarn.png"
+
+[[Unit]]
+id = "kylo"
+name = "Kylo Ren"
+image = "tex.charui_kyloren.png"
+
+[[Unit]]
+id = "kru"
+name = "Kylo Ren (Unmasked)"
+image = "tex.charui_kylo_unmasked.png"
+
+[[Unit]]
+id = "kyloShip"
+name = "Kylo Ren's Command Shuttle"
+image = "tex.charui_upsilon_shuttle_kylo.png"
+
+[[Unit]]
+id = "1337"
+name = "L3-37"
+image = "tex.charui_l337.png"
+
+[[Unit]]
+id = "lando"
+name = "Lando Calrissian"
+image = "tex.charui_landobespin.png"
+
+[[Unit]]
+id = "landoShip"
+name = "Lando's Millennium Falcon"
+image = "tex.charui_mil_fal_pristine.png"
+
+[[Unit]]
+id = "leia"
+name = "Leia Organa"
+image = "tex.charui_leiaendor.png"
+
+[[Unit]]
+id = "lev"
+name = "Leviathan"
+image = "tex.charui_leviathan.png"
+
+[[Unit]]
+id = "lobot"
+name = "Lobot"
+image = "tex.charui_lobot.png"
+
+[[Unit]]
+id = "logray"
+name = "Logray"
+image = "tex.charui_ewok_logray.png"
+
+[[Unit]]
+id = "lv"
+name = "Lord Vader"
+image = "tex.charui_lordvader.png"
+
+[[Unit]]
+id = "farmboy"
+name = "Luke Skywalker (Farmboy)"
+image = "tex.charui_luke_ep4.png"
+
+[[Unit]]
+id = "lumi"
+name = "Luminara Unduli"
+image = "tex.charui_luminara.png"
+
+[[Unit]]
+id = "luthen"
+name = "Luthen Rael"
+image = "tex.charui_luthenrael.png"
+
+[[Unit]]
+id = "roseShip"
+name = "MG-100 StarFortress SF-17"
+image = "tex.charui_mg100.png"
+
+[[Unit]]
+id = "mace"
+name = "Mace Windu"
+image = "tex.charui_macewindu.png"
+
+[[Unit]]
+id = "magma"
+name = "Magmatrooper"
+image = "tex.charui_trooperstorm_magma.png"
+
+[[Unit]]
+id = "malev"
+name = "Malevolence"
+image = "tex.charui_malevolence.png"
+
+[[Unit]]
+id = "evilMJ"
+name = "Mara Jade, The Emperor's Hand"
+image = "tex.charui_marajade.png"
+
+[[Unit]]
+id = "bbShip"
+name = "Marauder"
+image = "tex.charui_marauder.png"
+
+[[Unit]]
+id = "mk6"
+name = "Mark VI Interceptor"
+image = "tex.charui_sithsupremacyclass.png"
+
+[[Unit]]
+id = "marrok"
+name = "Marrok"
+image = "tex.charui_marrok.png"
+
+[[Unit]]
+id = "mqg"
+name = "Master Qui-Gon"
+image = "tex.charui_masterquigon.png"
+
+[[Unit]]
+id = "maul"
+name = "Maul"
+image = "tex.charui_maul_cyborg.png"
+
+[[Unit]]
+id = "maz"
+name = "Maz Kanata"
+image = "tex.charui_mazkanata.png"
+
+[[Unit]]
+id = "merrin"
+name = "Merrin"
+image = "tex.charui_merrin.png"
+
+[[Unit]]
+id = "mission"
+name = "Mission Vao"
+image = "tex.charui_mission.png"
+
+[[Unit]]
+id = "mob"
+name = "Mob Enforcer"
+image = "tex.charui_mob_enforcer.png"
+
+[[Unit]]
+id = "gideon"
+name = "Moff Gideon"
+image = "tex.charui_moffgideon.png"
+
+[[Unit]]
+id = "mothma"
+name = "Mon Mothma"
+image = "tex.charui_monmothma.png"
+
+[[Unit]]
+id = "elsbeth"
+name = "Morgan Elsbeth"
+image = "tex.charui_morganelsbeth.png"
+
+[[Unit]]
+id = "talzin"
+name = "Mother Talzin"
+image = "tex.charui_nightsisters_talzin.png"
+
+[[Unit]]
+id = "negotiator"
+name = "Negotiator"
+image = "tex.charui_negotiator.png"
+
+[[Unit]]
+id = "night"
+name = "Night Trooper"
+image = "tex.charui_nighttrooper_a.png"
+
+[[Unit]]
+id = "acolyte"
+name = "Nightsister Acolyte"
+image = "tex.charui_nightsister_acolyte.png"
+
+[[Unit]]
+id = "initiate"
+name = "Nightsister Initiate"
+image = "tex.charui_nightsister_initiate.png"
+
+[[Unit]]
+id = "spirit"
+name = "Nightsister Spirit"
+image = "tex.charui_nightsisters_wraith.png"
+
+[[Unit]]
+id = "zombie"
+name = "Nightsister Zombie"
+image = "tex.charui_nightsisters_zombie.png"
+
+[[Unit]]
+id = "9sis"
+name = "Ninth Sister"
+image = "tex.charui_ninthsister.png"
+
+[[Unit]]
+id = "nute"
+name = "Nute Gunray"
+image = "tex.charui_nutegunray.png"
+
+[[Unit]]
+id = "oldBen"
+name = "Obi-Wan Kenobi (Old Ben)"
+image = "tex.charui_obiwanep4.png"
+
+[[Unit]]
+id = "daka"
+name = "Old Daka"
+image = "tex.charui_daka.png"
+
+[[Unit]]
+id = "omega"
+name = "Omega"
+image = "tex.charui_badbatchomega.png"
+
+[[Unit]]
+id = "fomega"
+name = "Omega (Fugitive)"
+image = "tex.charui_omegas3.png"
+
+[[Unit]]
+id = "dashShip"
+name = "Outrider"
+image = "tex.charui_outrider.png"
+
+[[Unit]]
+id = "pow"
+name = "Padawan Obi-Wan"
+image = "tex.charui_padawanobiwan.png"
+
+[[Unit]]
+id = "padawren"
+name = "Padawan Sabine Wren"
+image = "tex.charui_padawansabine.png"
+
+[[Unit]]
+id = "padme"
+name = "Padmé Amidala"
+image = "tex.charui_padme_geonosis.png"
+
+[[Unit]]
+id = "pao"
+name = "Pao"
+image = "tex.charui_pao.png"
+
+[[Unit]]
+id = "paploo"
+name = "Paploo"
+image = "tex.charui_ewok_paploo.png"
+
+[[Unit]]
+id = "paz"
+name = "Paz Vizsla"
+image = "tex.charui_pazvizsla.png"
+
+[[Unit]]
+id = "phantom"
+name = "Phantom II"
+image = "tex.charui_phantom2.png"
+
+[[Unit]]
+id = "pkho"
+name = "Pirate King Hondo Ohnaka"
+image = "tex.charui_glhondo.png"
+
+[[Unit]]
+id = "plo"
+name = "Plo Koon"
+image = "tex.charui_plokoon.png"
+
+[[Unit]]
+id = "ploShip"
+name = "Plo Koon's Jedi Starfighter"
+image = "tex.charui_jedi_fighter_bladeofdorin.png"
+
+[[Unit]]
+id = "poe"
+name = "Poe Dameron"
+image = "tex.charui_poe.png"
+
+[[Unit]]
+id = "poeShip"
+name = "Poe Dameron's X-wing"
+image = "tex.charui_xwing_blackone.png"
+
+[[Unit]]
+id = "poggle"
+name = "Poggle the Lesser"
+image = "tex.charui_geonosian_poggle.png"
+
+[[Unit]]
+id = "kneesa"
+name = "Princess Kneesaa"
+image = "tex.charui_princesskneesaa.png"
+
+[[Unit]]
+id = "princessLeia"
+name = "Princess Leia"
+image = "tex.charui_leia_princess.png"
+
+[[Unit]]
+id = "prof"
+name = "Profundity"
+image = "tex.charui_profundity.png"
+
+[[Unit]]
+id = "p1"
+name = "Punishing One"
+image = "tex.charui_punishingone.png"
+
+[[Unit]]
+id = "qira"
+name = "Qi'ra"
+image = "tex.charui_qira.png"
+
+[[Unit]]
+id = "quadme"
+name = "Queen Amidala"
+image = "tex.charui_queenamidala.png"
+
+[[Unit]]
+id = "qgj"
+name = "Qui-Gon Jinn"
+image = "tex.charui_quigon.png"
+
+[[Unit]]
+id = "guigGOAT"
+name = "Quiggold"
+image = "tex.charui_quiggold.png"
+
+[[Unit]]
+id = "r2"
+name = "R2-D2"
+image = "tex.charui_astromech_r2d2.png"
+
+[[Unit]]
+id = "scorch"
+name = 'RC-1262 "Scorch"'
+image = "tex.charui_scorch.png"
+
+[[Unit]]
+id = "raddus"
+name = "Raddus"
+image = "tex.charui_raddus.png"
+
+[[Unit]]
+id = "range"
+name = "Range Trooper"
+image = "tex.charui_trooperranger.png"
+
+[[Unit]]
+id = "kyleShip"
+name = "Raven's Claw"
+image = "tex.charui_ravensclaw.png"
+
+[[Unit]]
+id = "rc"
+name = "Razor Crest"
+image = "tex.charui_razorcrest.png"
+
+[[Unit]]
+id = "bwing"
+name = "Rebel B-wing"
+image = "tex.charui_bwingrebel.png"
+
+[[Unit]]
+id = "rolo"
+name = "Rebel Officer Leia Organa"
+image = "tex.charui_leiahoth.png"
+
+[[Unit]]
+id = "ywingRebel"
+name = "Rebel Y-wing"
+image = "tex.charui_ywing.png"
+
+[[Unit]]
+id = "heroFinn"
+name = "Resistance Hero Finn"
+image = "tex.charui_finn.png"
+
+[[Unit]]
+id = "heroPoe"
+name = "Resistance Hero Poe"
+image = "tex.charui_poe_tros.png"
+
+[[Unit]]
+id = "resPilot"
+name = "Resistance Pilot"
+image = "tex.charui_resistancepilot.png"
+
+[[Unit]]
+id = "resTrooper"
+name = "Resistance Trooper"
+image = "tex.charui_resistancetrooper.png"
+
+[[Unit]]
+id = "resX"
+name = "Resistance X-wing"
+image = "tex.charui_xwing_resistance.png"
+
+[[Unit]]
+id = "rexShip"
+name = "Rex's ARC-170"
+image = "tex.charui_arc170_02.png"
+
+[[Unit]]
+id = "rey"
+name = "Rey"
+image = "tex.charui_rey_tros.png"
+
+[[Unit]]
+id = "drey"
+name = "Rey (Dark Side Vision)"
+image = "tex.charui_darkrey.png"
+
+[[Unit]]
+id = "jtr"
+name = "Rey (Jedi Training)"
+image = "tex.charui_rey_tlj.png"
+
+[[Unit]]
+id = "stickRey"
+name = "Rey (Scavenger)"
+image = "tex.charui_reyjakku.png"
+
+[[Unit]]
+id = "MILFrey"
+name = "Rey's Millennium Falcon"
+image = "tex.charui_mfalcon_ep7.png"
+
+[[Unit]]
+id = "r1"
+name = "Rogue One"
+image = "tex.charui_rogueoneship.png"
+
+[[Unit]]
+id = "rose"
+name = "Rose Tico"
+image = "tex.charui_rose.png"
+
+[[Unit]]
+id = "royalGuard"
+name = "Royal Guard"
+image = "tex.charui_royalguard.png"
+
+[[Unit]]
+id = "smee"
+name = "SM-33"
+image = "tex.charui_sm33.png"
+
+[[Unit]]
+id = "stap"
+name = "STAP"
+image = "tex.charui_stap.png"
+
+[[Unit]]
+id = "sabine"
+name = "Sabine Wren"
+image = "tex.charui_sabine_s3.png"
+
+[[Unit]]
+id = "sana"
+name = "Sana Starros"
+image = "tex.charui_sanastarros.png"
+
+[[Unit]]
+id = "savage"
+name = "Savage Opress"
+image = "tex.charui_savageopress.png"
+
+[[Unit]]
+id = "saw"
+name = "Saw Gerrera"
+image = "tex.charui_sawgerrera.png"
+
+[[Unit]]
+id = "srp"
+name = "Scarif Rebel Pathfinder"
+image = "tex.charui_rebel_scarif.png"
+
+[[Unit]]
+id = "maulShip"
+name = "Scimitar"
+image = "tex.charui_sithinfiltrator.png"
+
+[[Unit]]
+id = "scout"
+name = "Scout Trooper"
+image = "tex.charui_trooperscout.png"
+
+[[Unit]]
+id = "inqShip"
+name = "Scythe"
+image = "tex.charui_scythe.png"
+
+[[Unit]]
+id = "2sis"
+name = "Second Sister"
+image = "tex.charui_secondsister.png"
+
+[[Unit]]
+id = "7sis"
+name = "Seventh Sister"
+image = "tex.charui_seventhsister.png"
+
+[[Unit]]
+id = "shakk"
+name = "Shaak Ti"
+image = "tex.charui_shaakti.png"
+
+[[Unit]]
+id = "shin"
+name = "Shin Hati"
+image = "tex.charui_shinhati.png"
+
+[[Unit]]
+id = "shore"
+name = "Shoretrooper"
+image = "tex.charui_troopershore.png"
+
+[[Unit]]
+id = "sass"
+name = "Sith Assassin"
+image = "tex.charui_sithassassin.png"
+
+[[Unit]]
+id = "set"
+name = "Sith Empire Trooper"
+image = "tex.charui_sithtrooper.png"
+
+[[Unit]]
+id = "see"
+name = "Sith Eternal Emperor"
+image = "tex.charui_espalpatine_pre.png"
+
+[[Unit]]
+id = "sassShip"
+name = "Sith Fighter"
+image = "tex.charui_sithfighter.png"
+
+[[Unit]]
+id = "sithMarauder"
+name = "Sith Marauder"
+image = "tex.charui_sithmarauder.png"
+
+[[Unit]]
+id = "redLobster"
+name = "Sith Trooper"
+image = "tex.charui_firstorder_sithtrooper.png"
+
+[[Unit]]
+id = "skiff"
+name = "Skiff Guard (Lando Calrissian)"
+image = "tex.charui_undercoverlando.png"
+
+[[Unit]]
+id = "PrisonerWithJobOne"
+name = "Slave I"
+image = "tex.charui_slave1.png"
+
+[[Unit]]
+id = "snow"
+name = "Snowtrooper"
+image = "tex.charui_troopersnow.png"
+
+[[Unit]]
+id = "sk"
+name = "Starkiller"
+image = "tex.charui_starkiller.png"
+
+[[Unit]]
+id = "storm"
+name = "Stormtrooper"
+image = "tex.charui_trooperstorm.png"
+
+[[Unit]]
+id = "sth"
+name = "Stormtrooper Han"
+image = "tex.charui_trooperstorm_han.png"
+
+[[Unit]]
+id = "sunF***"
+name = "Sun Fac"
+image = "tex.charui_geonosian_sunfac.png"
+
+[[Unit]]
+id = "sunF***Ship"
+name = "Sun Fac's Geonosian Starfighter"
+image = "tex.charui_geonosis_fighter_sunfac.png"
+
+[[Unit]]
+id = "slkr"
+name = "Supreme Leader Kylo Ren"
+image = "tex.charui_kyloren_tros.png"
+
+[[Unit]]
+id = "t3m4"
+name = "T3-M4"
+image = "tex.charui_t3m4.png"
+
+[[Unit]]
+id = "vaderShip"
+name = "TIE Advanced x1"
+image = "tex.charui_tieadvanced.png"
+
+[[Unit]]
+id = "dagger"
+name = "TIE Dagger"
+image = "tex.charui_tiedagger.png"
+
+[[Unit]]
+id = "tdc"
+name = "TIE Defender"
+image = "tex.charui_tiedefender.png"
+
+[[Unit]]
+id = "echelon"
+name = "TIE Echelon"
+image = "tex.charui_firstordertieechelon.png"
+
+[[Unit]]
+id = "tfp"
+name = "TIE Fighter Pilot"
+image = "tex.charui_tiepilot.png"
+
+[[Unit]]
+id = "reaper"
+name = "TIE Reaper"
+image = "tex.charui_tiereaper.png"
+
+[[Unit]]
+id = "kruShip"
+name = "TIE Silencer"
+image = "tex.charui_tie_silencer.png"
+
+[[Unit]]
+id = "tieInterceptor"
+name = "TIE/IN Interceptor Prototype"
+image = "tex.charui_tie_interceptor_prototype.png"
+
+[[Unit]]
+id = "talia"
+name = "Talia"
+image = "tex.charui_nightsister_talia.png"
+
+[[Unit]]
+id = "tarfull"
+name = "Tarfful"
+image = "tex.charui_tarfful.png"
+
+[[Unit]]
+id = "malicos"
+name = "Taron Malicos"
+image = "tex.charui_taronmalicos.png"
+
+[[Unit]]
+id = "tech"
+name = "Tech"
+image = "tex.charui_bb_tech.png"
+
+[[Unit]]
+id = "teebo"
+name = "Teebo"
+image = "tex.charui_ewok_teebo.png"
+
+[[Unit]]
+id = "templeguard"
+name = "Temple Guard"
+image = "tex.charui_vanguardtempleguard.png"
+
+[[Unit]]
+id = "armorer"
+name = "The Armorer"
+image = "tex.charui_armorer.png"
+
+[[Unit]]
+id = "mando"
+name = "The Mandalorian"
+image = "tex.charui_mandalorian.png"
+
+[[Unit]]
+id = "bando"
+name = "The Mandalorian (Beskar Armor)"
+image = "tex.charui_mandobeskar.png"
+
+[[Unit]]
+id = "reva"
+name = "Third Sister"
+image = "tex.charui_thirdsister.png"
+
+[[Unit]]
+id = "chewPio"
+name = "Threepio & Chewie"
+image = "tex.charui_chewbacca_c3po.png"
+
+[[Unit]]
+id = "chief"
+name = "Tusken Chieftain"
+image = "tex.charui_tuskenchieftain.png"
+
+[[Unit]]
+id = "raider"
+name = "Tusken Raider"
+image = "tex.charui_tuskenraider.png"
+
+[[Unit]]
+id = "shaman"
+name = "Tusken Shaman"
+image = "tex.charui_tuskenshaman.png"
+
+[[Unit]]
+id = "warrior"
+name = "Tusken Warrior"
+image = "tex.charui_tuskenhuntress.png"
+
+[[Unit]]
+id = "whatever"
+name = "URoRRuR'R'R"
+image = "tex.charui_urorrurrr.png"
+
+[[Unit]]
+id = "smallerPig"
+name = "Ugnaught"
+image = "tex.charui_ugnaught.png"
+
+[[Unit]]
+id = "fivesShip"
+name = "Umbaran Starfighter"
+image = "tex.charui_umbaran_star_fighter.png"
+
+[[Unit]]
+id = "vandor"
+name = "Vandor Chewbacca"
+image = "tex.charui_chewbacca_vandor.png"
+
+[[Unit]]
+id = "vane"
+name = "Vane"
+image = "tex.charui_vane.png"
+
+[[Unit]]
+id = "vetChewie"
+name = "Veteran Smuggler Chewbacca"
+image = "tex.charui_tfa_chewbacca.png"
+
+[[Unit]]
+id = "vetHan"
+name = "Veteran Smuggler Han Solo"
+image = "tex.charui_tfa_han.png"
+
+[[Unit]]
+id = "mastercard"
+name = "Visas Marr"
+image = "tex.charui_visas.png"
+
+[[Unit]]
+id = "vulture"
+name = "Vulture Droid"
+image = "tex.charui_vulturedroid.png"
+
+[[Unit]]
+id = "wampa"
+name = "Wampa"
+image = "tex.charui_wampa.png"
+
+[[Unit]]
+id = "wat"
+name = "Wat Tambor"
+image = "tex.charui_wattambor.png"
+
+[[Unit]]
+id = "wedge"
+name = "Wedge Antilles"
+image = "tex.charui_rebelpilot_wedge.png"
+
+[[Unit]]
+id = "wedgeShip"
+name = "Wedge Antilles's X-wing"
+image = "tex.charui_xwing_red2.png"
+
+[[Unit]]
+id = "wicket"
+name = "Wicket"
+image = "tex.charui_ewok_wicket.png"
+
+[[Unit]]
+id = "wrecker"
+name = "Wrecker"
+image = "tex.charui_bb_wrecker.png"
+
+[[Unit]]
+id = "wreckerMerc"
+name = "Wrecker (Mercenary)"
+image = "tex.charui_wreckers3.png"
+
+[[Unit]]
+id = "xb"
+name = "Xanadu Blood"
+image = "tex.charui_xanadublood.png"
+
+[[Unit]]
+id = "yan"
+name = "Young Han Solo"
+image = "tex.charui_han_young.png"
+
+[[Unit]]
+id = "yando"
+name = "Young Lando Calrissian"
+image = "tex.charui_younglando.png"
+
+[[Unit]]
+id = "bigZ"
+name = "Zaalbar"
+image = "tex.charui_zaalbar.png"
+
+[[Unit]]
+id = "zam"
+name = "Zam Wesell"
+image = "tex.charui_zamwesell.png"
+
+[[Unit]]
+id = "zorii"
+name = "Zorii Bliss"
+image = "tex.charui_zoriibliss.png"
+
 [[Unit]]
 id = "[PH]"
-name = "TODO: add unit"
+name = "Unknown Unit"
 image = "missing.png"
-# ! do NOT add any other unit beyond this

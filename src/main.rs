@@ -38,6 +38,11 @@ fn main() {
             .document()
             .expect("No document");
 
+        let screen = web_sys::window()
+            .expect("No Window")
+            .screen()
+            .expect("No Screen");
+
         let canvas = document
             .get_element_by_id("the_canvas_id")
             .expect("Failed to find the_canvas_id")
@@ -48,7 +53,7 @@ fn main() {
             .start(
                 canvas,
                 web_options,
-                Box::new(|cc| Ok(Box::new(swgoh_tb::App::new(cc)))),
+                Box::new(|cc| Ok(Box::new(swgoh_tb::App::new(cc, screen)))),
             )
             .await;
 

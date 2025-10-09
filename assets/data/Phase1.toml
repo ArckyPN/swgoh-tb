@@ -10,38 +10,38 @@ note = "Full Auto"
 [[Dark.mission]]
 id = "P1DCM1"
 name = "Left Combat Mission"
-team = [ "SEE", "Malak", "DR", "SASS", "Wat" ]
+team = [ "SEE", "Malak", "revan", "SASS", "Wat" ]
 note = "Full Auto"
 
 [[Dark.mission]]
 id = "P1DCM2"
 name = "Top Combat Mission"
-team = [ "SLKR", "DRey", "KRU", "ST", "Hux" ]
+team = [ "SLKR", "DRey", "KRU", "fos", "Hux" ]
 note = "Poke Droideka, then Full Auto"
 
 [[Dark.mission]]
 id = "P1DCM3"
 name = "Right Combat Mission"
-team = [ "Reva", "GI", "7S", "8B", "5B" ]
+team = [ "Reva", "1Bro", "7Sis", "8Bro", "5Bro" ]
 note = "Full Auto"
 
 [[Dark.mission]]
 id = "P1DF"
 name = "Fleet"
-team = [ "Leviathan", "Scythe", "SithBomber", "MK6", "SithFighter", "TieAdvanced", "Scimitar" ]
+team = [ "lev", "inqShip", "b28", "MK6", "sassShip", "vaderShip", "maulShip" ]
 note = "full auto, highly inconsistent"
 
 [[Dark.mission]]
 id = "P1DF"
 name = "Fleet"
-team = [ "Executrix", "Scythe", "MK6", "TieAdvanced", "TDC", "TieInterceptor", "Gauntlet", "Lambda" ]
-note = "manual"
+team = [ "Executrix", "inqShip", "MK6", "vaderShip", "TDC", "TieInterceptor", "Gauntlet", "palpMobil" ]
+note = "manual, highly RNG-dependent (TIE Defender needs to dodge a lot)"
 
 [[Dark.mission]]
 id = "P1DF"
 name = "Fleet"
-team = [ "Executrix", "Scythe", "SithFighter", "TieAdvanced", "TDC", "TieInterceptor", "Gauntlet", "Lambda" ]
-note = "manual"
+team = [ "Executrix", "inqShip", "sassShip", "vaderShip", "TDC", "TieInterceptor", "Gauntlet", "palpMobil" ]
+note = "manual, highly RNG-dependent (TIE Defender needs to dodge a lot)"
 
 [Mixed]
 name = "Corellia"
@@ -61,25 +61,25 @@ note = "Full Auto"
 [[Mixed.mission]]
 id = "P1MCM"
 name = "Combat Mission"
-team = [ "bkm", "bando", "paz", "ogBo", "ig12" ]
+team = [ "bkm", "bando", "paz", "Bo", "ig12" ]
 note = "full auto"
 
 [[Mixed.mission]]
 id = "P1MSM"
 name = "Qi'ra Special Mission"
-team = [ "qira", "yhs", "r2", "drogan", "leia" ]
+team = [ "qira", "yan", "r2", "drogan", "leia" ]
 note = "Full Auto"
 
 [[Mixed.mission]]
 id = "P1MF"
 name = "Fleet"
-team = [ "Executor", "ht", "p1", "xb", "s1", "ig2000" ]
+team = [ "exec", "ht", "p1", "xb", "PrisonerWithJobOne", "ig2k" ]
 note = "Full Auto"
 
 [[Mixed.mission]]
 id = "P1MF"
 name = "Fleet"
-team = [ "Executor", "ht", "p1", "rc", "xb", "s1", "ig2000" ]
+team = [ "exec", "ht", "p1", "rc", "xb", "PrisonerWithJobOne", "ig2k" ]
 note = "Full Auto"
 
 [Light]
@@ -88,7 +88,7 @@ name = "Coruscant"
 [[Light.mission]]
 id = "P1LMace"
 name = "Mace + Kit Combat Mission"
-team = [ "mw", "jmk", "gas", "snips", "fisto" ]
+team = [ "mace", "jmk", "gas", "snips", "fisto" ]
 note = "Full Auto"
 
 [[Light.mission]]
@@ -100,29 +100,29 @@ note = "Full Auto"
 [[Light.mission]]
 id = "P1LCM"
 name = "Combat Mission"
-team = [ "at", "psw", "ebe", "huyang", "GenSyn" ]
+team = [ "glat", "padawren", "theBetterEzra", "huyang", "GenSyn" ]
 note = "Full Auto"
 
 [[Light.mission]]
 id = "P1LCM"
 name = "Combat Mission"
-team = [ "bmf", "depa", "tg", "jocasta", "aayla" ]
+team = [ "bamf", "depa", "templeguard", "jocasta", "aayla" ]
 note = "Full Auto"
 
 [[Light.mission]]
 id = "P1LF"
 name = "Fleet"
-team = [ "Profundity", "outrider", "milf", "ywingR", "ghost", "phantom", "r1" ]
+team = [ "prof", "dashShip", "milf", "ywingRebel", "ghost", "phantom", "r1" ]
 note = "Full Auto"
 
 [[Light.mission]]
 id = "P1LF"
 name = "Fleet"
-team = [ "Raddus", "outrider", "ResBomber", "PoeX", "ResX", "Comeuppance" ]
+team = [ "Raddus", "dashShip", "roseShip", "PoeShip", "ResX", "zoriiShip" ]
 note = "Full Auto"
 
 [[Light.mission]]
 id = "P1LF"
 name = "Fleet"
-team = [ "Negotiator", "outrider", "jkaShip", "Marauder", "ywingGR", "snipsShip", "fivesShip" ]
+team = [ "Negotiator", "dashShip", "jkaShip", "bbShip", "ywing", "snipShip", "fivesShip" ]
 note = "Full Auto"
