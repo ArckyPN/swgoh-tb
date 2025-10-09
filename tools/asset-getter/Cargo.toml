@@ -1,0 +1,18 @@
+[package]
+name = "asset-getter"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.100"
+log = "0.4.28"
+pretty_env_logger = "0.5.0"
+regex = "1.11.3"
+reqwest = "0.12.23"
+serde = { version = "1.0.219", features = ["derive"] }
+thirtyfour = "0.36.1"
+tokio = { version = "1.47.1", features = ["full"] }
+toml = "0.9.7"
+
+[lints]
+workspace = true
