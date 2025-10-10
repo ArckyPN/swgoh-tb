@@ -500,11 +500,25 @@ impl eframe::App for App {
             });
         });
 
-        let info = self.note_font_size();
-        let width = if self.is_mobile() {
-            self.resolution().0 * 0.9
+        let info = self.note_font_size(
+            #[cfg(not(target_arch = "wasm32"))]
+            ctx,
+        );
+        let width = if self.is_mobile(
+            #[cfg(not(target_arch = "wasm32"))]
+            ctx,
+        ) {
+            self.resolution(
+                #[cfg(not(target_arch = "wasm32"))]
+                ctx,
+            )
+            .0 * 0.9
         } else {
-            self.resolution().0 / 2.
+            self.resolution(
+                #[cfg(not(target_arch = "wasm32"))]
+                ctx,
+            )
+            .0 / 2.
         };
         egui::Window::new("Info")
             .open(&mut self.info)
