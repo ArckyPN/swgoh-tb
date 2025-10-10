@@ -1,21 +1,12 @@
 use crate::{Mission, Phase, Planet, Teams, Units};
 
-enum Size {
-    /// <= 1080p
-    Small,
-    /// <= 1440p
-    Medium,
-    /// > 1440p
-    Big,
-}
-
 pub struct App {
     units: Units,
     teams: Teams,
     search: String,
 
     #[cfg(target_arch = "wasm32")]
-    screen: web_sys::Screen,
+    window: web_sys::Window,
     #[cfg(target_arch = "wasm32")]
     origin: String,
 }
@@ -26,12 +17,11 @@ impl App {
     /// Called once before the first frame.
     pub fn new(
         cc: &eframe::CreationContext<'_>,
-        #[cfg(target_arch = "wasm32")] screen: web_sys::Screen,
+        #[cfg(target_arch = "wasm32")] screen: web_sys::Window,
     ) -> Self {
         // This is also where you can customize the look and feel of egui using
         // `cc.egui_ctx.set_visuals` and `cc.egui_ctx.set_fonts`.
         egui_extras::install_image_loaders(&cc.egui_ctx);
-        // cc.egui_ctx.add_image_loader(loader);
         let units = toml::from_slice(include_bytes!("../assets/data/Units.toml"))
             .expect("failed to load units");
 
@@ -42,7 +32,7 @@ impl App {
             teams,
             search: Default::default(),
             #[cfg(target_arch = "wasm32")]
-            screen,
+            window: screen,
             #[cfg(target_arch = "wasm32")]
             origin: if cc.integration_info.web_info.location.url.contains("dev") {
                 cc.integration_info.web_info.location.origin.clone()
@@ -53,40 +43,54 @@ impl App {
     }
 
     /// screen resolution (width, height) in pixels
-    fn resolution(&self) -> (i32, i32) {
-        // TODO better use window size to also be able to handle cropped window
+    #[cfg(target_arch = "wasm32")]
+    fn resolution(&self) -> (f32, f32) {
         (
-            self.screen.width().expect("missing width"),
-            self.screen.height().expect("missing height"),
+            self.window
+                .inner_width()
+                .expect("missing width")
+                .as_f64()
+                .expect("is number") as f32,
+            self.window
+                .inner_height()
+                .expect("missing height")
+                .as_f64()
+                .expect("is number") as f32,
         )
     }
 
-    fn size(&self) -> Size {
-        let res = self.resolution();
-        match if self.is_mobile() { res.0 } else { res.1 } {
-            ..1081 => Size::Small,
-            1081..1441 => Size::Medium,
-            _ => Size::Big,
-        }
+    #[cfg(not(target_arch = "wasm32"))]
+    fn resolution(&self, ctx: &egui::Context) -> (f32, f32) {
+        let size = ctx.screen_rect();
+        (size.max.x - size.min.x, size.max.y - size.min.y)
     }
 
     // TODO fns for different types of sizes (cap ship, starting ship, reinforcement icons, different kinds of texts, etc.), see example
-    fn character_icon_size(&self) -> egui::Vec2 {
-        match self.size() {
-            Size::Small => egui::Vec2::new(50., 50.),
-            Size::Medium => egui::Vec2::new(75., 75.),
-            Size::Big => egui::Vec2::new(100., 100.),
-        }
+    fn character_icon_size(
+        &self,
+        #[cfg(not(target_arch = "wasm32"))] ctx: &egui::Context,
+    ) -> egui::Vec2 {
+        let res = self.resolution(
+            #[cfg(not(target_arch = "wasm32"))]
+            ctx,
+        );
+        let base = if self.is_mobile() { res.0 } else { res.1 };
+        let size = base / 20.;
+        egui::Vec2::new(size, size)
     }
 
     /// true => portrait mode
     ///
     /// false => landscape mode
+    #[cfg(target_arch = "wasm32")]
     fn is_mobile(&self) -> bool {
-        self.screen.avail_height().expect("missing avail height")
-            > self.screen.avail_width().expect("missing avail height")
+        let screen = self.window.screen().expect("missing screen");
+
+        screen.avail_height().expect("missing avail height")
+            > screen.avail_width().expect("missing avail height")
     }
 
+    #[cfg(target_arch = "wasm32")]
     fn render_phase(&self, ui: &mut egui::Ui, phase: &Phase) {
         if self.is_mobile() {
             ui.horizontal(|ui| {

@@ -16,4 +16,5 @@ pub struct Mission {
     /// additional note giving information
     /// about this mission
     pub note: String,
+    // TODO add relic requirement
 }

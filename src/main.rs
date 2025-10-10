@@ -7,8 +7,8 @@ fn main() -> eframe::Result {
 
     let native_options = eframe::NativeOptions {
         viewport: egui::ViewportBuilder::default()
-            .with_inner_size([400.0, 300.0])
-            .with_min_inner_size([300.0, 220.0])
+            .with_min_inner_size([1920., 1080.])
+            .with_maximized(true)
             .with_icon(
                 // NOTE: Adding an icon is optional
                 eframe::icon_data::from_png_bytes(&include_bytes!("../assets/icon-256.png")[..])
@@ -33,15 +33,9 @@ fn main() {
     let web_options = eframe::WebOptions::default();
 
     wasm_bindgen_futures::spawn_local(async {
-        let document = web_sys::window()
-            .expect("No window")
-            .document()
-            .expect("No document");
+        let window = web_sys::window().expect("No Window");
 
-        let screen = web_sys::window()
-            .expect("No Window")
-            .screen()
-            .expect("No Screen");
+        let document = window.document().expect("No document");
 
         let canvas = document
             .get_element_by_id("the_canvas_id")
@@ -53,7 +47,7 @@ fn main() {
             .start(
                 canvas,
                 web_options,
-                Box::new(|cc| Ok(Box::new(swgoh_tb::App::new(cc, screen)))),
+                Box::new(|cc| Ok(Box::new(swgoh_tb::App::new(cc, window)))),
             )
             .await;
 
