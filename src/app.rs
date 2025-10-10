@@ -12,6 +12,7 @@ pub struct App {
 }
 
 // TODO replace the images in assets/ with custom made ones (adjust in manifest.json and index.html and check if used in other locations)
+// TODO figure out how to include Omicrons, as icons or just in notes?
 
 impl App {
     /// Called once before the first frame.
@@ -453,9 +454,38 @@ impl App {
         missing
     }
 
-    fn render_info(ui: &mut egui::Ui) {
-        ui.label("TODO: some info");
-        // TODO describe stuff
+    fn render_info(ui: &mut egui::Ui, font_size: f32) {
+        let text = |text: &str| egui::RichText::new(text).size(font_size);
+
+        ui.horizontal(|ui| {
+            ui.label(text(
+                "This website provides ideal teams to master the Territory Battle ",
+            ));
+            ui.label(text("Rise of the Empire").monospace());
+            ui.label(text(" in Star Wars: Galaxy of Heroes."));
+        });
+
+        ui.add_space(20.);
+
+        ui.horizontal(|ui| {
+            ui.label(text("The information is based on a combination of personal experience by myself and my guild and the websites "));
+            ui.hyperlink_to(text("https://genskaar.github.io/tb_empire/").monospace(), "https://genskaar.github.io/tb_empire/");
+            ui.label(text(" and "));
+            ui.hyperlink_to(text("https://www.swgohrote.com/").monospace(), "https://www.swgohrote.com/");
+            ui.label(".");
+        });
+
+        ui.add_space(20.);
+
+        ui.horizontal(|ui| {
+            ui.label(text("The major contribution I am bringing, which the other sites aren't doing, is providing a recommendation of teams to use without any overlap per phase. This way one is able to easily look up teams to clear a full phase or get an idea on which teams to build up."));
+        });
+
+        ui.add_space(20.);
+
+        ui.horizontal(|ui| {
+            ui.label("Where possible, I prefer teams which are able to full auto missions (without Omicrons). When full auto is not possible, I will give alternatives.");
+        });
     }
 }
 
@@ -470,9 +500,19 @@ impl eframe::App for App {
             });
         });
 
+        let info = self.note_font_size();
+        let width = if self.is_mobile() {
+            self.resolution().0 * 0.9
+        } else {
+            self.resolution().0 / 2.
+        };
         egui::Window::new("Info")
             .open(&mut self.info)
-            .show(ctx, Self::render_info);
+            .max_width(width) // FIXME fixed sized window
+            .resizable(false)
+            .show(ctx, |ui| {
+                Self::render_info(ui, info);
+            });
 
         egui::CentralPanel::default().show(ctx, |ui| {
             egui::ScrollArea::vertical().show(ui, |ui| {
