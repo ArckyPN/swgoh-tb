@@ -10,14 +10,19 @@ pub struct Units {
     data: Vec<Unit>,
 }
 
-impl core::ops::Index<&str> for Units {
-    type Output = Unit;
-    fn index(&self, index: &str) -> &Self::Output {
+impl Units {
+    pub fn get(&self, id: &str) -> Unit {
+        if id.is_empty() {
+            return Unit::unavailable();
+        }
+        if id.eq_ignore_ascii_case("[ph]") {
+            return Unit::placeholder();
+        }
         for unit in &self.data {
-            if unit.id.eq_ignore_ascii_case(index) {
-                return unit;
+            if unit.id.eq_ignore_ascii_case(id) {
+                return unit.clone();
             }
         }
-        &self.data[self.data.len() - 1]
+        Unit::missing()
     }
 }

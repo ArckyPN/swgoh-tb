@@ -1,4 +1,4 @@
-use std::{cmp::Ordering, fmt::Display, path::PathBuf};
+use std::{fmt::Display, path::PathBuf};
 
 use anyhow::{Context as _, Result};
 use serde::{Deserialize, Serialize};
@@ -48,16 +48,6 @@ impl Unit {
     }
 }
 
-impl Default for Unit {
-    fn default() -> Self {
-        Self {
-            id: "[PH]".to_owned(),
-            name: "Unknown Unit".to_owned(),
-            image: "missing.png".to_owned(),
-        }
-    }
-}
-
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Units {
     #[serde(rename = "Unit")]
@@ -82,7 +72,7 @@ impl UnitsCrawler {
             let temp: Units = toml::from_slice(&buf)?;
             temp.data
         } else {
-            vec![Default::default()]
+            vec![]
         };
 
         log::debug!("connecting to gecko driver");
@@ -252,15 +242,7 @@ impl UnitsCrawler {
         let mut units = Units {
             data: self.units.clone(),
         };
-        units.data.sort_by(|a, b| {
-            if a.name == Unit::default().name {
-                return Ordering::Greater;
-            }
-            if b.name == Unit::default().name {
-                return Ordering::Less;
-            }
-            a.name.cmp(&b.name)
-        });
+        units.data.sort_by(|a, b| a.name.cmp(&b.name));
         let s = toml::to_string(&units)?;
 
         std::fs::write(&self.units_toml, s)?;

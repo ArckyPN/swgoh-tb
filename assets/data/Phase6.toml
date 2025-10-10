@@ -1,26 +1,113 @@
 [Dark]
-name = ""
+name = "Death Star"
 
 [[Dark.mission]]
-id = ""
-name = ""
-team = [""]
-note = ""
+id = "P6DIV"
+name = "Iden Version Combat Mission"
+team = [ "iden", "[ph]", "[ph]", "[ph]", "[ph]" ]
+note = "TODO: add team"
+relic = 9
+
+[[Dark.mission]]
+id = "P6DDV"
+name = "Darth Vader Combat Mission"
+team = [ "vader", "", "", "", "" ]
+note = "TODO: add note"
+relic = 9
+
+[[Dark.mission]]
+id = "P6DCM"
+name = "Combat Mission"
+team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
+note = "TODO: add team"
+relic = 9
+
+[[Dark.mission]]
+id = "P6DCM"
+name = "Combat Mission"
+team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
+note = "TODO: add team"
+relic = 9
+
+[[Dark.mission]]
+id = "P6DF"
+name = "Fleet"
+team = [ "[ph]", "itf", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
+note = "TODO: add team"
+relic = 0
 
 [Mixed]
-name = ""
+name = "Hoth"
 
 [[Mixed.mission]]
-id = ""
-name = ""
-team = [""]
-note = ""
+id = "P6MJ"
+name = "Jabba Combat Mission"
+team = [ "Jabba", "Krrsantan", "Boushh", "Boba", "Skiff" ]
+note = "TODO: add team"
+relic = 9
+
+[[Mixed.mission]]
+id = "P6MDA"
+name = "Doctor Aphra + Droid Combat Mission"
+team = [ "aphra", "bt1", "trip", "[ph]", "[ph]" ]
+note = "TODO: add team"
+relic = 9
+
+[[Mixed.mission]]
+id = "P6MCM1"
+name = "Top Combat Mission (Wampas)"
+team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
+note = "TODO: add team"
+relic = 9
+
+[[Mixed.mission]]
+id = "P6MCM2"
+name = "Bottom Combat Mission"
+team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
+note = "TODO: add team"
+relic = 9
+
+[[Mixed.mission]]
+id = "P6MF"
+name = "Fleet"
+team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
+note = "TODO: add team"
+relic = 0
 
 [Light]
-name = ""
+name = "Scarif"
 
 [[Light.mission]]
-id = ""
-name = ""
-team = [""]
-note = ""
+id = "P6LR1"
+name = "Cassian Andor + K-2SO + Pao Combat Mission"
+team = [ "[ph]", "andor", "k2so", "pao", "[ph]" ]
+note = "TODO: add team"
+relic = 9
+
+[[Light.mission]]
+id = "P6LR2"
+name = "Baze Malbus + Chirrut Îmwe + Scarif Rebel Pathfinder Combat Mission"
+team = [ "[ph]", "baze", "chirrut", "srp", "[ph]" ]
+note = "TODO: add team"
+relic = 9
+
+[[Light.mission]]
+id = "P6LCM1"
+name = "Left Combat Mission"
+team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
+note = "TODO: add team"
+relic = 9
+
+[[Light.mission]]
+id = "P6LCM2"
+name = "Right Combat Mission"
+team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
+note = "TODO: add team"
+relic = 9
+
+[[Light.mission]]
+id = "P6LF"
+name = "Fleet"
+team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
+note = "TODO: add team"
+relic = 0

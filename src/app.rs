@@ -1,9 +1,10 @@
-use crate::{Mission, Phase, Planet, Teams, Units};
+use crate::{Mission, Phase, Planet, Teams, Unit, Units};
 
 pub struct App {
     units: Units,
     teams: Teams,
     search: String,
+    info: bool,
 
     #[cfg(target_arch = "wasm32")]
     window: web_sys::Window,
@@ -30,6 +31,7 @@ impl App {
             units,
             teams,
             search: Default::default(),
+            info: false,
             #[cfg(target_arch = "wasm32")]
             window: screen,
             #[cfg(target_arch = "wasm32")]
@@ -67,25 +69,59 @@ impl App {
         (size.max.x - size.min.x, size.max.y - size.min.y)
     }
 
-    // TODO fns for different types of sizes (cap ship, starting ship, reinforcement icons, different kinds of texts, etc.), see example
-    fn character_icon_size(
-        &self,
-        #[cfg(not(target_arch = "wasm32"))] ctx: &egui::Context,
-    ) -> egui::Vec2 {
+    fn reference_size(&self, #[cfg(not(target_arch = "wasm32"))] ctx: &egui::Context) -> f32 {
         let res = self.resolution(
             #[cfg(not(target_arch = "wasm32"))]
             ctx,
         );
-        let base = if self.is_mobile(
+        if self.is_mobile(
             #[cfg(not(target_arch = "wasm32"))]
             ctx,
         ) {
             res.0
         } else {
             res.1
-        };
+        }
+    }
+
+    fn character_icon_size(
+        &self,
+        #[cfg(not(target_arch = "wasm32"))] ctx: &egui::Context,
+    ) -> egui::Vec2 {
+        let base = self.reference_size(
+            #[cfg(not(target_arch = "wasm32"))]
+            ctx,
+        );
         let size = base / 20.;
         egui::Vec2::new(size, size)
+    }
+
+    fn planet_font_size(&self, #[cfg(not(target_arch = "wasm32"))] ctx: &egui::Context) -> f32 {
+        self.reference_size(
+            #[cfg(not(target_arch = "wasm32"))]
+            ctx,
+        ) / 40.
+    }
+
+    fn mission_font_size(&self, #[cfg(not(target_arch = "wasm32"))] ctx: &egui::Context) -> f32 {
+        self.reference_size(
+            #[cfg(not(target_arch = "wasm32"))]
+            ctx,
+        ) / 60.
+    }
+
+    fn note_font_size(&self, #[cfg(not(target_arch = "wasm32"))] ctx: &egui::Context) -> f32 {
+        self.reference_size(
+            #[cfg(not(target_arch = "wasm32"))]
+            ctx,
+        ) / 70.
+    }
+
+    fn unit_font_size(&self, #[cfg(not(target_arch = "wasm32"))] ctx: &egui::Context) -> f32 {
+        self.reference_size(
+            #[cfg(not(target_arch = "wasm32"))]
+            ctx,
+        ) / 135.
     }
 
     /// true => portrait mode
@@ -115,47 +151,71 @@ impl App {
             #[cfg(not(target_arch = "wasm32"))]
             ctx,
         ) {
-            ui.horizontal(|ui| {
-                self.render_planet(
-                    ui,
-                    &phase.dark,
-                    #[cfg(not(target_arch = "wasm32"))]
-                    ctx,
-                );
-                self.render_planet(
-                    ui,
-                    &phase.mixed,
-                    #[cfg(not(target_arch = "wasm32"))]
-                    ctx,
-                );
-                self.render_planet(
-                    ui,
-                    &phase.light,
-                    #[cfg(not(target_arch = "wasm32"))]
-                    ctx,
-                );
-            });
+            // TODO mobile support
         } else {
-            ui.columns(3, |ui| {
-                self.render_planet(
-                    &mut ui[0],
-                    &phase.dark,
-                    #[cfg(not(target_arch = "wasm32"))]
-                    ctx,
-                );
-                self.render_planet(
-                    &mut ui[1],
-                    &phase.mixed,
-                    #[cfg(not(target_arch = "wasm32"))]
-                    ctx,
-                );
-                self.render_planet(
-                    &mut ui[2],
-                    &phase.light,
-                    #[cfg(not(target_arch = "wasm32"))]
-                    ctx,
-                );
-            });
+            match &phase.bonus {
+                Some(bonus) => {
+                    ui.columns(4, |ui| {
+                        let mut ui = ui.iter_mut();
+                        self.render_planet(
+                            ui.next().expect("has one"),
+                            &phase.dark,
+                            #[cfg(not(target_arch = "wasm32"))]
+                            ctx,
+                        );
+                        if bonus.name.eq_ignore_ascii_case("Mandalore") {
+                            self.render_planet(
+                                ui.next().expect("has one"),
+                                bonus,
+                                #[cfg(not(target_arch = "wasm32"))]
+                                ctx,
+                            );
+                        }
+                        self.render_planet(
+                            ui.next().expect("has one"),
+                            &phase.mixed,
+                            #[cfg(not(target_arch = "wasm32"))]
+                            ctx,
+                        );
+                        if bonus.name.eq_ignore_ascii_case("Zeffo") {
+                            self.render_planet(
+                                ui.next().expect("has one"),
+                                bonus,
+                                #[cfg(not(target_arch = "wasm32"))]
+                                ctx,
+                            );
+                        }
+                        self.render_planet(
+                            ui.next().expect("has one"),
+                            &phase.dark,
+                            #[cfg(not(target_arch = "wasm32"))]
+                            ctx,
+                        );
+                    });
+                }
+                None => {
+                    ui.columns_const(|[c1, c2, c3]| {
+                        self.render_planet(
+                            c1,
+                            &phase.dark,
+                            #[cfg(not(target_arch = "wasm32"))]
+                            ctx,
+                        );
+                        self.render_planet(
+                            c2,
+                            &phase.mixed,
+                            #[cfg(not(target_arch = "wasm32"))]
+                            ctx,
+                        );
+                        self.render_planet(
+                            c3,
+                            &phase.light,
+                            #[cfg(not(target_arch = "wasm32"))]
+                            ctx,
+                        );
+                    });
+                }
+            }
         }
     }
 
@@ -165,8 +225,14 @@ impl App {
         planet: &Planet,
         #[cfg(not(target_arch = "wasm32"))] ctx: &egui::Context,
     ) {
-        // TODO size based on resolution
-        ui.vertical_centered(|ui| ui.heading(&planet.name));
+        ui.vertical_centered(|ui| {
+            ui.label(
+                egui::RichText::new(&planet.name).size(self.planet_font_size(
+                    #[cfg(not(target_arch = "wasm32"))]
+                    ctx,
+                )),
+            );
+        });
         for mission in &planet.missions {
             ui.separator();
             self.render_mission(
@@ -184,84 +250,238 @@ impl App {
         mission: &Mission,
         #[cfg(not(target_arch = "wasm32"))] ctx: &egui::Context,
     ) {
-        ui.vertical_centered(|ui| {
-            // TODO size based on resolution
-            ui.label(egui::RichText::new(format!("{} ({})", mission.name, mission.id)).size(20.));
+        ui.vertical(|ui| {
+            ui.vertical_centered(|ui| {
+                ui.label(
+                    egui::RichText::new(format!("{} ({})", mission.name, mission.id)).size(
+                        self.mission_font_size(
+                            #[cfg(not(target_arch = "wasm32"))]
+                            ctx,
+                        ),
+                    ),
+                );
+            });
+
+            ui.label(
+                egui::RichText::new(if mission.name != "Fleet" {
+                    format!("Relic: {}+", mission.relic)
+                } else {
+                    "7* Stars".to_owned()
+                })
+                .size(self.note_font_size(
+                    #[cfg(not(target_arch = "wasm32"))]
+                    ctx,
+                )),
+            );
+
+            ui.horizontal(|ui| {
+                let missing = if mission.name != "Fleet" {
+                    self.render_squad(
+                        ui,
+                        &mission.team,
+                        #[cfg(not(target_arch = "wasm32"))]
+                        ctx,
+                    )
+                } else {
+                    self.render_fleet(
+                        ui,
+                        &mission.team,
+                        #[cfg(not(target_arch = "wasm32"))]
+                        ctx,
+                    )
+                };
+                self.missing_helper(
+                    missing,
+                    ui,
+                    #[cfg(not(target_arch = "wasm32"))]
+                    ctx,
+                );
+            });
+
+            ui.label(egui::RichText::new(format!("Note: {}", mission.note)).size(
+                self.note_font_size(
+                    #[cfg(not(target_arch = "wasm32"))]
+                    ctx,
+                ),
+            ));
         });
+    }
+
+    /// simple helper to make sure all slots are filled in the PhaseX.toml files
+    fn missing_helper(
+        &self,
+        missing: i32,
+        ui: &mut egui::Ui,
+        #[cfg(not(target_arch = "wasm32"))] ctx: &egui::Context,
+    ) {
+        for _ in 0..missing {
+            ui.vertical(|ui| {
+                self.render_unit(
+                    ui,
+                    &Unit::forgot(),
+                    self.character_icon_size(
+                        #[cfg(not(target_arch = "wasm32"))]
+                        ctx,
+                    ),
+                    #[cfg(not(target_arch = "wasm32"))]
+                    ctx,
+                );
+            });
+        }
+    }
+
+    fn render_unit(
+        &self,
+        ui: &mut egui::Ui,
+        unit: &Unit,
+        size: impl Into<egui::Vec2>,
+        #[cfg(not(target_arch = "wasm32"))] ctx: &egui::Context,
+    ) {
+        ui.vertical(|ui| {
+            ui.add_sized(size, |ui: &mut egui::Ui| -> egui::Response {
+                let res = ui.add(egui::Image::new(unit.image(&self.origin)).shrink_to_fit());
+                if unit.id.eq_ignore_ascii_case("[ph]") {
+                    res.on_hover_text("open spots can be filled with whatever you want, but generally these spots are not needed");
+                } else if unit.id.eq_ignore_ascii_case("unavailable") {
+                    res.on_hover_text("this spot cannot be filled");
+                }
+                ui.vertical_centered(|ui| {
+                    ui.label(egui::RichText::new(&unit.name).size(self.unit_font_size(#[cfg(not(target_arch = "wasm32"))] ctx)));
+                })
+                .response
+            });
+        });
+    }
+
+    fn render_squad(
+        &self,
+        ui: &mut egui::Ui,
+        team: &[String],
+        #[cfg(not(target_arch = "wasm32"))] ctx: &egui::Context,
+    ) -> i32 {
+        let mut missing = 5;
 
         ui.horizontal(|ui| {
-            let mut missing;
-            if mission.name != "Fleet" {
-                missing = 5;
-                for unit in &mission.team {
-                    missing -= 1;
-                    let unit = &self.units[unit.as_str()];
-                    ui.vertical(|ui| {
-                        ui.add_sized(
+            for unit in team {
+                missing -= 1;
+                let unit = self.units.get(unit);
+                self.render_unit(
+                    ui,
+                    &unit,
+                    self.character_icon_size(
+                        #[cfg(not(target_arch = "wasm32"))]
+                        ctx,
+                    ),
+                    #[cfg(not(target_arch = "wasm32"))]
+                    ctx,
+                );
+            }
+        });
+
+        missing
+    }
+
+    fn render_fleet(
+        &self,
+        ui: &mut egui::Ui,
+        team: &[String],
+        #[cfg(not(target_arch = "wasm32"))] ctx: &egui::Context,
+    ) -> i32 {
+        let mut missing = 8;
+
+        let mut team = team.iter().map(|u| self.units.get(u));
+
+        ui.horizontal(|ui| {
+            // capital ship
+            let cap = team.next().expect("must have capital ship");
+            self.render_unit(
+                ui,
+                &cap,
+                self.character_icon_size(
+                    #[cfg(not(target_arch = "wasm32"))]
+                    ctx,
+                ) * 1.1,
+                #[cfg(not(target_arch = "wasm32"))]
+                ctx,
+            );
+            missing -= 1;
+
+            // starting lineup
+            for starting in team.by_ref() {
+                self.render_unit(
+                    ui,
+                    &starting,
+                    self.character_icon_size(
+                        #[cfg(not(target_arch = "wasm32"))]
+                        ctx,
+                    ) * 0.9,
+                    #[cfg(not(target_arch = "wasm32"))]
+                    ctx,
+                );
+                missing -= 1;
+                if missing == 4 {
+                    break;
+                }
+            }
+
+            // reinforcements
+            ui.vertical(|ui| {
+                ui.label(
+                    egui::RichText::new("Reinforcements").size(self.unit_font_size(
+                        #[cfg(not(target_arch = "wasm32"))]
+                        ctx,
+                    )),
+                );
+                ui.horizontal(|ui| {
+                    for reinforcement in team {
+                        self.render_unit(
+                            ui,
+                            &reinforcement,
                             self.character_icon_size(
                                 #[cfg(not(target_arch = "wasm32"))]
                                 ctx,
-                            ),
-                            |ui: &mut egui::Ui| -> egui::Response {
-                                ui.add(
-                                    egui::Image::new(unit.image(&self.origin))
-                                        .alt_text(&unit.name)
-                                        .shrink_to_fit(),
-                                );
-                                // TODO center name below image and make it bigger
-                                ui.vertical_centered(|ui| {
-                                    ui.label(&unit.name);
-                                })
-                                .response
-                            },
+                            ) * 0.8,
+                            #[cfg(not(target_arch = "wasm32"))]
+                            ctx,
                         );
-                    });
-                }
-            } else {
-                missing = 8;
-                for (idx, ship) in mission.team.iter().enumerate() {
-                    missing -= 1;
-                    let ship = &self.units[ship.as_str()];
-
-                    let image = egui::Image::new(ship.image(&self.origin)).alt_text(&ship.name);
-                    ui.vertical(|ui| {
-                        ui.add(image);
-                        ui.label(&ship.name);
-                    });
-
-                    if idx == 0 {
-                        // TODO cap ship biggest icon
-                    } else if idx < 4 {
-                        // TODO starting lineup slightly smaller, aligned to the top
-                    } else {
-                        // TODO reinforcements again slightly small and "Reinforcements" aligned to the top and icons below
+                        missing -= 1;
                     }
-                }
-            }
-            for _ in 0..missing {
-                // TODO add a placeholder for empty slots?
-                ui.label("[PH]");
-            }
+                });
+            });
         });
 
-        ui.horizontal(|ui| {
-            // TODO bigger text?
-            ui.label(format!("Note: {}", mission.note));
-        });
+        missing
+    }
+
+    fn render_info(ui: &mut egui::Ui) {
+        ui.label("TODO: some info");
+        // TODO describe stuff
     }
 }
 
 impl eframe::App for App {
     fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
-        egui::TopBottomPanel::top("top_panel")
-            .show(ctx, |ui| ui.heading("Rise of the Empire TB Team setup"));
+        egui::TopBottomPanel::top("top_panel").show(ctx, |ui| {
+            ui.horizontal(|ui| {
+                ui.heading("Rise of the Empire TB Team setup");
+                if ui.button("Info").clicked() {
+                    self.info = !self.info;
+                }
+            });
+        });
+
+        egui::Window::new("Info")
+            .open(&mut self.info)
+            .show(ctx, Self::render_info);
 
         egui::CentralPanel::default().show(ctx, |ui| {
             egui::ScrollArea::vertical().show(ui, |ui| {
                 ui.group(|ui| {
                     ui.horizontal(|ui| {
                         ui.label("Search:");
-                        ui.text_edit_singleline(&mut self.search);
+                        ui.text_edit_singleline(&mut self.search).on_hover_text(
+                            "Search for Mission IDs to quickly find the mission you need to do",
+                        );
                         if ui.button("Clear").clicked() {
                             self.search = String::new();
                         }
@@ -285,16 +505,22 @@ impl eframe::App for App {
                 });
 
                 for (idx, phase) in self.teams.phases.iter().enumerate() {
-                    // TODO size based on resolution
-                    ui.collapsing(format!("Phase {}", idx + 1), |ui| {
-                        // phase.render(ui, &self.units, origin);
-                        self.render_phase(
-                            ui,
-                            phase,
-                            #[cfg(not(target_arch = "wasm32"))]
-                            ctx,
-                        );
-                    });
+                    ui.collapsing(
+                        egui::RichText::new(format!("Phase {}", idx + 1)).size(
+                            self.note_font_size(
+                                #[cfg(not(target_arch = "wasm32"))]
+                                ctx,
+                            ),
+                        ),
+                        |ui| {
+                            self.render_phase(
+                                ui,
+                                phase,
+                                #[cfg(not(target_arch = "wasm32"))]
+                                ctx,
+                            );
+                        },
+                    );
                 }
 
                 ui.separator();

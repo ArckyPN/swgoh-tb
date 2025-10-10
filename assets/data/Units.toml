@@ -860,7 +860,7 @@ image = "tex.charui_ig11_nurse.png"
 
 [[Unit]]
 id = "ig12"
-name = "IG-12 &amp; Grogu"
+name = "IG-12 & Grogu"
 image = "tex.charui_ig12.png"
 
 [[Unit]]
@@ -1877,8 +1877,3 @@ image = "tex.charui_zamwesell.png"
 id = "zorii"
 name = "Zorii Bliss"
 image = "tex.charui_zoriibliss.png"
-
-[[Unit]]
-id = "[PH]"
-name = "Unknown Unit"
-image = "missing.png"

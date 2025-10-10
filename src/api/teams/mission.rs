@@ -16,5 +16,9 @@ pub struct Mission {
     /// additional note giving information
     /// about this mission
     pub note: String,
-    // TODO add relic requirement
+    /// the relic requirement of this
+    /// mission
+    ///
+    /// fleet mission only require 7 stars
+    pub relic: u8,
 }

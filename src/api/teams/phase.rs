@@ -10,4 +10,6 @@ pub struct Phase {
     pub mixed: Planet,
     #[serde(rename = "Light")]
     pub light: Planet,
+    #[serde(rename = "Bonus")]
+    pub bonus: Option<Planet>,
 }
