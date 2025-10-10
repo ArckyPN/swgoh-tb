@@ -7,7 +7,6 @@ pub struct App {
 
     #[cfg(target_arch = "wasm32")]
     window: web_sys::Window,
-    #[cfg(target_arch = "wasm32")]
     origin: String,
 }
 
@@ -39,6 +38,8 @@ impl App {
             } else {
                 cc.integration_info.web_info.location.url.clone()
             },
+            #[cfg(not(target_arch = "wasm32"))]
+            origin: "../assets".to_owned(),
         }
     }
 
@@ -59,6 +60,7 @@ impl App {
         )
     }
 
+    #[expect(clippy::unused_self)]
     #[cfg(not(target_arch = "wasm32"))]
     fn resolution(&self, ctx: &egui::Context) -> (f32, f32) {
         let size = ctx.screen_rect();
@@ -74,7 +76,14 @@ impl App {
             #[cfg(not(target_arch = "wasm32"))]
             ctx,
         );
-        let base = if self.is_mobile() { res.0 } else { res.1 };
+        let base = if self.is_mobile(
+            #[cfg(not(target_arch = "wasm32"))]
+            ctx,
+        ) {
+            res.0
+        } else {
+            res.1
+        };
         let size = base / 20.;
         egui::Vec2::new(size, size)
     }
@@ -90,33 +99,91 @@ impl App {
             > screen.avail_width().expect("missing avail height")
     }
 
-    #[cfg(target_arch = "wasm32")]
-    fn render_phase(&self, ui: &mut egui::Ui, phase: &Phase) {
-        if self.is_mobile() {
+    #[cfg(not(target_arch = "wasm32"))]
+    fn is_mobile(&self, ctx: &egui::Context) -> bool {
+        let res = self.resolution(ctx);
+        res.1 > res.0
+    }
+
+    fn render_phase(
+        &self,
+        ui: &mut egui::Ui,
+        phase: &Phase,
+        #[cfg(not(target_arch = "wasm32"))] ctx: &egui::Context,
+    ) {
+        if self.is_mobile(
+            #[cfg(not(target_arch = "wasm32"))]
+            ctx,
+        ) {
             ui.horizontal(|ui| {
-                self.render_planet(ui, &phase.dark);
-                self.render_planet(ui, &phase.mixed);
-                self.render_planet(ui, &phase.light);
+                self.render_planet(
+                    ui,
+                    &phase.dark,
+                    #[cfg(not(target_arch = "wasm32"))]
+                    ctx,
+                );
+                self.render_planet(
+                    ui,
+                    &phase.mixed,
+                    #[cfg(not(target_arch = "wasm32"))]
+                    ctx,
+                );
+                self.render_planet(
+                    ui,
+                    &phase.light,
+                    #[cfg(not(target_arch = "wasm32"))]
+                    ctx,
+                );
             });
         } else {
             ui.columns(3, |ui| {
-                self.render_planet(&mut ui[0], &phase.dark);
-                self.render_planet(&mut ui[1], &phase.mixed);
-                self.render_planet(&mut ui[2], &phase.light);
+                self.render_planet(
+                    &mut ui[0],
+                    &phase.dark,
+                    #[cfg(not(target_arch = "wasm32"))]
+                    ctx,
+                );
+                self.render_planet(
+                    &mut ui[1],
+                    &phase.mixed,
+                    #[cfg(not(target_arch = "wasm32"))]
+                    ctx,
+                );
+                self.render_planet(
+                    &mut ui[2],
+                    &phase.light,
+                    #[cfg(not(target_arch = "wasm32"))]
+                    ctx,
+                );
             });
         }
     }
 
-    fn render_planet(&self, ui: &mut egui::Ui, planet: &Planet) {
+    fn render_planet(
+        &self,
+        ui: &mut egui::Ui,
+        planet: &Planet,
+        #[cfg(not(target_arch = "wasm32"))] ctx: &egui::Context,
+    ) {
         // TODO size based on resolution
         ui.vertical_centered(|ui| ui.heading(&planet.name));
         for mission in &planet.missions {
             ui.separator();
-            self.render_mission(ui, mission);
+            self.render_mission(
+                ui,
+                mission,
+                #[cfg(not(target_arch = "wasm32"))]
+                ctx,
+            );
         }
     }
 
-    fn render_mission(&self, ui: &mut egui::Ui, mission: &Mission) {
+    fn render_mission(
+        &self,
+        ui: &mut egui::Ui,
+        mission: &Mission,
+        #[cfg(not(target_arch = "wasm32"))] ctx: &egui::Context,
+    ) {
         ui.vertical_centered(|ui| {
             // TODO size based on resolution
             ui.label(egui::RichText::new(format!("{} ({})", mission.name, mission.id)).size(20.));
@@ -131,7 +198,10 @@ impl App {
                     let unit = &self.units[unit.as_str()];
                     ui.vertical(|ui| {
                         ui.add_sized(
-                            self.character_icon_size(),
+                            self.character_icon_size(
+                                #[cfg(not(target_arch = "wasm32"))]
+                                ctx,
+                            ),
                             |ui: &mut egui::Ui| -> egui::Response {
                                 ui.add(
                                     egui::Image::new(unit.image(&self.origin))
@@ -182,23 +252,6 @@ impl App {
 }
 
 impl eframe::App for App {
-    // TODO include native support
-    #[cfg(not(target_arch = "wasm32"))]
-    fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
-        let _: &Units = &self.units;
-        let _: &Teams = &self.teams;
-        let _: &String = &self.search;
-        egui::CentralPanel::default().show(ctx, |ui| {
-            ui.label("currently only wasm32 is supported");
-
-            ui.with_layout(egui::Layout::bottom_up(egui::Align::LEFT), |ui| {
-                powered_by_egui_and_eframe(ui);
-                egui::warn_if_debug_build(ui);
-            });
-        });
-    }
-
-    #[cfg(target_arch = "wasm32")]
     fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
         egui::TopBottomPanel::top("top_panel")
             .show(ctx, |ui| ui.heading("Rise of the Empire TB Team setup"));
@@ -220,7 +273,12 @@ impl eframe::App for App {
                                 if idx > 0 {
                                     ui.separator();
                                 }
-                                self.render_mission(ui, mission);
+                                self.render_mission(
+                                    ui,
+                                    mission,
+                                    #[cfg(not(target_arch = "wasm32"))]
+                                    ctx,
+                                );
                             }
                         }
                     });
@@ -230,7 +288,12 @@ impl eframe::App for App {
                     // TODO size based on resolution
                     ui.collapsing(format!("Phase {}", idx + 1), |ui| {
                         // phase.render(ui, &self.units, origin);
-                        self.render_phase(ui, phase);
+                        self.render_phase(
+                            ui,
+                            phase,
+                            #[cfg(not(target_arch = "wasm32"))]
+                            ctx,
+                        );
                     });
                 }
 
