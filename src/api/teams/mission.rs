@@ -21,4 +21,7 @@ pub struct Mission {
     ///
     /// fleet mission only require 7 stars
     pub relic: u8,
+    // TODO add omicrons
+    // TODO add video links
+    // TODO modding?
 }

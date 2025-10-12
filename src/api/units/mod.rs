@@ -11,6 +11,10 @@ pub struct Units {
 }
 
 impl Units {
+    pub fn load() -> Self {
+        toml::from_slice(include_bytes!("../../../assets/data/Units.toml"))
+            .expect("failed to load units")
+    }
     pub fn get(&self, id: &str) -> Unit {
         if id.is_empty() {
             return Unit::unavailable();
