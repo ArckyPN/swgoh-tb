@@ -739,7 +739,7 @@ name = "Grand Admiral Thrawn"
 image = "tex.charui_thrawn.png"
 
 [[Unit]]
-id = "1bro"
+id = "GI"
 name = "Grand Inquisitor"
 image = "tex.charui_grandinquisitor.png"
 
@@ -1544,7 +1544,7 @@ name = "Scout Trooper"
 image = "tex.charui_trooperscout.png"
 
 [[Unit]]
-id = "inqShip"
+id = "scythe"
 name = "Scythe"
 image = "tex.charui_scythe.png"
 

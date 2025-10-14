@@ -1,10 +1,14 @@
 mod mission;
+mod omicron;
 mod phase;
 mod planet;
+mod video;
 
 pub use mission::*;
+pub use omicron::*;
 pub use phase::*;
 pub use planet::*;
+pub use video::*;
 
 macro_rules! phases {
     ( $($num:literal),+ ) => {

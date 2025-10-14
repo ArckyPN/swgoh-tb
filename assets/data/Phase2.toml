@@ -4,37 +4,58 @@ name = "Geonosis"
 [[Dark.mission]]
 id = "P2DNexu"
 name = "Top Combat Mission (Nexu)"
-team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = "TODO: add team"
+team = [ "reva", "GI", "7sis", "8bro", "5bro" ]
+note = [ 
+    "Start with Grand Inquisitor Special 2, then Full Auto"
+]
 relic = 6
 
 [[Dark.mission]]
 id = "P2DReek"
 name = "Left Combat Mission (Reek)"
-team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = "TODO: add team"
+team = [ "lv", "appo", "scorch", "cx2", "dct" ]
+note = [ "Full Auto" ]
+relic = 6
+
+[[Dark.mission]]
+id = "P2DReek"
+name = "Left Combat Mission (Reek)"
+team = [ "lv", "evilMJ", "royalGuard", "piett", "thrawn" ]
+note = [ "Full Auto" ]
 relic = 6
 
 [[Dark.mission]]
 id = "P2DAcklay"
 name = "Bottom Combat Mission (Acklay)"
-team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = "TODO: add team"
+team = [ "slkr", "drey", "kru", "hux", "foo" ]
+note = [ "Full Auto" ]
+relic = 6
+
+[[Dark.mission]]
+id = "P2DAcklay"
+name = "Bottom Combat Mission (Acklay)"
+team = [ "slkr", "redLobster", "kru", "hux", "foo" ]
+note = [ "Full Auto, prefer to use the above Dark Rey version." ]
 relic = 6
 
 [[Dark.mission]]
 id = "P2DGeo"
 name = "Geonosian Combat Mission"
 team = [ "gba", "geoSo", "sunF***", "geoSpy", "poggle" ]
-note = "TODO: add team"
+note = [ "Auto seems to be not possible (haven't found a video, yet, and I can't do this mission myself, yet 3/5)" ]
 relic = 7
 
 [[Dark.mission]]
 id = "P2DF"
 name = "Fleet"
-team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = "TODO: add team"
-relic = 0
+team = [ "executrix", "mk6", "vaderShip", "scythe", "tdc", "tieInterceptor", "sassShip", "itf" ]
+note = [ 
+    "Unreliable. Check out the video by Kahzgul.",
+    "TODO: add detailed description"
+]
+videos = [
+    { src = "Kahzgul", url = "https://www.youtube.com/watch?v=4uXzIQqyh1A" },
+]
 
 [Mixed]
 name = "Felucia"
@@ -42,37 +63,75 @@ name = "Felucia"
 [[Mixed.mission]]
 id = "P2MY"
 name = "Young Lando Calrissian Combat Mission"
-team = [ "[ph]", "[ph]", "[ph]", "[ph]", "yando" ]
-note = "TODO: add team"
+team = [ "glat", "yando", "theBetterEzra", "padawren", "genSyn" ]
+note = [
+    "Full Auto. Ezra is mandatory! Minimum R8, ideally R9."
+]
 relic = 6
 
 [[Mixed.mission]]
 id = "P2MHO"
 name = "Hondo Ohnaka Combat Mission"
-team = [ "[ph]", "[ph]", "[ph]", "[ph]", "hondo" ]
-note = "TODO: add team"
+team = [ "baylan", "hondo", "shin", "marrok", "qira" ]
+note = [
+    "Manual. Very easy.",
+    "TODO: make and add video",
+]
 relic = 6
+
+[[Mixed.mission]]
+id = "P2MHO"
+name = "Hondo Ohnaka Combat Mission"
+team = [ "fomega", "hondo", "wreckerMerc", "crosshair", "hunterMerc" ]
+note = [
+    "Full Auto. Requires Wrecker Omicron, though."
+]
+relic = 6
+omicrons = [
+    { unit = "wreckerMerc", omis = ["u1"] }
+]
 
 [[Mixed.mission]]
 id = "P2MJ"
 name = "Jabba Combat Mission"
 team = [ "Jabba", "Krrsantan", "Boushh", "Boba", "Skiff" ]
-note = "TODO: add team"
+note = [
+    "Full Auto. Boba can be replaced with any Hutt Cartel."
+]
 relic = 6
 
 [[Mixed.mission]]
 id = "P2MCM"
 name = "Combat Mission"
-team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = "TODO: add team"
+team = [ "bkm", "bando", "paz", "bo", "ig12" ]
+note = [
+    "Full Auto."
+]
 relic = 6
 
 [[Mixed.mission]]
 id = "P2MF"
 name = "Fleet"
-team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = "TODO: add team"
-relic = 0
+team = [ "exec", "ht", "rc", "xb", "PrisonerWithJobOne", "ig2k", "", "" ]
+note = [
+    "Full Auto. Razor Crest is key."
+]
+
+[[Mixed.mission]]
+id = "P2MF"
+name = "Fleet"
+team = [ "exec", "ht", "rc", "p1", "xb", "PrisonerWithJobOne", "ig2k", "", "" ]
+note = [
+    "Full Auto. Razor Crest is key."
+]
+
+[[Mixed.mission]]
+id = "P2MF"
+name = "Fleet"
+team = [ "malev", "vulture", "hyena", "sunF***Ship", "geoSpyShip", "geoSoShip", "", "" ]
+note = [
+    "Full Auto. In case you had to platoon Executor or Razor Crest."
+]
 
 [Light]
 name = "Bracca"
@@ -81,33 +140,62 @@ name = "Bracca"
 id = "P2LSM"
 name = "Zeffo Special Mission"
 team = [ "cere", "jkc", "", "", "" ]
-note = "TODO: add note"
+note = [
+    "Manual. Needs specific modding (see below) as well this strategy:",
+    "(Ideally wait for all platoons to be filled)",
+    "",
+    "Wave 1/2:",
+    "\tFocus fire on one of the Purge Troopers. Use Cal's Basic or Granted Ability to dispel Taunts from the other Purge Trooper or Probe Droid.",
+    "\tGet Cal to 30 Stacks Impetuous asap. Use Special 3 to wipe out the Purge Trooper you didn't focus fire.",
+    "\tClearing the remaining Purge Trooper is no problem. Ignore Probe Droid as much as possible, don't waste damage on it.",
+    "",
+    "Wave 2/2:",
+    "\tSame as Wave 1. Focus fire the Purge Trooper. Use Instant-kill to clear Trilla.",
+    "TODO: add modding image",
+]
 relic = 7
+
+[[Light.mission]]
+id = "P2LSM"
+name = "Zeffo Special Mission"
+team = [ "cere", "jkc", "", "", "" ]
+note = [
+    "Full Auto. Requires the two non-lead Omicrons on Jedi Cal, though."
+]
+relic = 7
+omicrons = [
+    { unit = "jkc", omis = ["s1", "s3"] }
+]
 
 [[Light.mission]]
 id = "P2LJ"
 name = "Jedi Combat Mission"
-team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = "TODO: add team"
+team = [ "bamf", "depa", "aayla", "jocasta", "templeguard" ]
+note = [
+    "Full Auto. TODO: verify!"
+]
 relic = 6
 
 [[Light.mission]]
 id = "P2LCM1"
 name = "Left Combat Mission (Crosshair)"
-team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = "TODO: add note"
+team = [ "leia", "drogan", "r2", "han", "chewie" ]
+note = [
+    "Full Auto. Might get unlucky is Leia is below R8."
+]
 relic = 6
 
 [[Light.mission]]
 id = "P2LCM2"
 name = "Right Combat Mission (Second Sister)"
 team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = "TODO: add note"
+note = [ "TODO: Padme CAT?" ]
 relic = 6
 
 [[Light.mission]]
 id = "P2LF"
 name = "Fleet"
-team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = "TODO: add note"
-relic = 0
+team = [ "prof", "milf", "dashShip", "ywingRebel", "r1", "phantom", "ghost", "" ]
+note = [
+    "Target Scythe. Full Auto."
+]

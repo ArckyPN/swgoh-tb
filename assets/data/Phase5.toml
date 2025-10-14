@@ -5,28 +5,28 @@ name = "Malachor"
 id = "P5DI"
 name = "Inquisitor Combat Mission"
 team = [ "[ph]", "8bro", "5bro", "7sis", "[ph]" ]
-note = "TODO: add team"
+note = [ "TODO: add team" ]
 relic = 9
 
 [[Dark.mission]]
 id = "P4DCM1"
 name = "Left Combat Mission"
 team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = "TODO: add team"
+note = [ "TODO: add team" ]
 relic = 9
 
 [[Dark.mission]]
 id = "P4DCM2"
 name = "Top Combat Mission"
 team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = "TODO: add team"
+note = [ "TODO: add team" ]
 relic = 9
 
 [[Dark.mission]]
 id = "P4DCM3"
 name = "Right Combat Mission"
 team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = "TODO: add team"
+note = [ "TODO: add team" ]
 relic = 9
 
 [Mixed]
@@ -36,35 +36,35 @@ name = "Vandor"
 id = "P5MSM"
 name = "Young Han Solo + Vandor Chewbacca Special Mission"
 team = [ "[ph]", "yan", "vandor", "[ph]", "[ph]" ]
-note = "TODO: add team"
+note = [ "TODO: add team" ]
 relic = 9
 
 [[Mixed.mission]]
 id = "P5MJ"
 name = "Jabba Special Mission"
 team = [ "Jabba", "Krrsantan", "Boushh", "Boba", "Skiff" ]
-note = "TODO: add team"
+note = [ "TODO: add team" ]
 relic = 9
 
 [[Mixed.mission]]
 id = "P5MCM1"
 name = "Left Combat Mission"
 team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = "TODO: add team"
+note = [ "TODO: add team" ]
 relic = 9
 
 [[Mixed.mission]]
 id = "P5MCM2"
 name = "Right Combat Mission"
 team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = "TODO: add team"
+note = [ "TODO: add team" ]
 relic = 9
 
 [[Mixed.mission]]
 id = "P5MF"
 name = "Fleet"
 team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = "TODO: add team"
+note = [ "TODO: add team" ]
 relic = 0
 
 [Light]
@@ -74,33 +74,33 @@ name = "Ring of Kafrene"
 id = "P5LR1"
 name = "Cassian Andor + K-2SO Combat Mission"
 team = [ "[ph]", "andor", "k2so", "[ph]", "[ph]" ]
-note = "TODO: add team"
+note = [ "TODO: add team" ]
 relic = 9
 
 [[Light.mission]]
 id = "P5LCM1"
 name = "Left Combat Mission"
 team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = "TODO: add team"
+note = [ "TODO: add team" ]
 relic = 9
 
 [[Light.mission]]
 id = "P5LCM2"
 name = "Top Combat Mission"
 team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = "TODO: add team"
+note = [ "TODO: add team" ]
 relic = 9
 
 [[Light.mission]]
 id = "P5LCM3"
 name = "Right Combat Mission"
 team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = "TODO: add team"
+note = [ "TODO: add team" ]
 relic = 9
 
 [[Light.mission]]
 id = "P5LF"
 name = "Fleet"
 team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = "TODO: add team"
+note = [ "TODO: add team" ]
 relic = 0

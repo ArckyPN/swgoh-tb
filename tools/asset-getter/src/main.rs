@@ -41,7 +41,8 @@ struct Unit {
 impl Unit {
     pub fn new(name: &str, image: &str) -> Self {
         Self {
-            id: "# TODO: add id".to_owned(),
+            // ugly to prevent this from being registered as an actual todo
+            id: format!("# {}: add id", "todo".to_ascii_uppercase()),
             name: name.to_owned(),
             image: image.to_owned(),
         }

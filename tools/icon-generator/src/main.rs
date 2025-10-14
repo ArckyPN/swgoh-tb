@@ -175,3 +175,5 @@ fn main() {
 
     std::fs::remove_file("temp.svg").expect("failed to clean workspace");
 }
+
+// TODO also create missing, placeholder and unavailable icons like this

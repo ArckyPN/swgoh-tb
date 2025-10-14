@@ -16,7 +16,7 @@ impl Unit {
         Self {
             id: String::new(),
             name: "Unknown Unit".to_owned(),
-            image: "missing.png".to_owned(),
+            image: "icon-missing.png".to_owned(),
         }
     }
 
@@ -24,7 +24,7 @@ impl Unit {
         Self {
             id: "[ph]".to_owned(),
             name: "open spot".to_owned(),
-            image: "placeholder.png".to_owned(),
+            image: "icon-placeholder.png".to_owned(),
         }
     }
 
@@ -32,7 +32,7 @@ impl Unit {
         Self {
             id: "unavailable".to_owned(),
             name: "unavailable".to_owned(),
-            image: "unavailable.png".to_owned(),
+            image: "icon-unavailable.png".to_owned(),
         }
     }
 
@@ -40,7 +40,7 @@ impl Unit {
         Self {
             id: String::new(),
             name: "forgot to add all spots in PhaseX.toml".to_owned(),
-            image: "missing.png".to_owned(),
+            image: "icon-missing.png".to_owned(),
         }
     }
 }
