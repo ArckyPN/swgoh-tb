@@ -297,7 +297,7 @@ impl App {
                         ui.label(egui::RichText::new(omicron.len().to_string()).strong().size(self.unit_font_size()))
                     });
                 }
-                
+
                 ui.vertical_centered(|ui| {
                     ui.label(egui::RichText::new(&unit.name).size(self.unit_font_size()));
                 })
