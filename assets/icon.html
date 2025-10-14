@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=3840, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  TODO once this work, make this in rust as new tool
+        const LEN = 1024;
+
+        let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        svg.setAttribute("width", `${LEN}`);
+        svg.setAttribute("height", `${LEN}`);
+        svg.style.fontFamily = "'Courier New', Courier, monospace";
+
+        function stuff(bool) {
+            if ( !bool ) return;
+            let tempBackground = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+            tempBackground.setAttribute("x", "0");
+            tempBackground.setAttribute("y", "0");
+            tempBackground.setAttribute("width", `${LEN}`);
+            tempBackground.setAttribute("height", `${LEN}`);
+            tempBackground.setAttribute("stroke", "#000000");
+            tempBackground.setAttribute("stroke-width", "1");
+            tempBackground.setAttribute("fill", "#ffffff");
+            svg.appendChild(tempBackground);
+            let padding = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+            padding.setAttribute("x", `${LEN * 0.2}`);
+            padding.setAttribute("y", `${LEN * 0.2}`);
+            padding.setAttribute("width", `${LEN * 0.6}`);
+            padding.setAttribute("height", `${LEN * 0.6}`);
+            padding.setAttribute("stroke", "#000000");
+            padding.setAttribute("stroke-width", "3");
+            padding.setAttribute("fill", "#ffffff");
+            svg.appendChild(padding);
+            function grid(p) {
+                function line(...pts) {
+                    let line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+                    line.setAttribute("x1", `${pts[0][0]}`);
+                    line.setAttribute("y1", `${pts[0][1]}`);
+                    line.setAttribute("x2", `${pts[1][0]}`);
+                    line.setAttribute("y2", `${pts[1][1]}`);
+                    line.setAttribute("stroke", "#444444");
+                    line.setAttribute("stroke-width", "1");
+                    svg.appendChild(line);
+                }
+                for ( let i = p ; i < 1 ; i+=p ) {
+                    line([0, LEN * i], [LEN, LEN * i]);
+                    line([LEN * i, 0], [LEN * i, LEN]);
+                }
+            }
+            grid(0.1)
+        }
+        stuff(true);
+
+        const b = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        b.setAttribute("d", `\
+            M ${LEN * 0.6} ${LEN * 0.8} \
+            h ${-LEN * 0.2} v ${-LEN * 0.6} h ${LEN * 0.2} \
+            q ${LEN * 0.2} ${0} ${LEN * 0.2} ${LEN * 0.15} \
+            q 0 ${LEN * 0.1} ${-LEN * 0.1} ${LEN * 0.15} \
+            q ${LEN * 0.1} ${LEN * 0.05} ${LEN * 0.1} ${LEN * 0.15} \
+            q 0 ${LEN * 0.15} ${-LEN * 0.2} ${LEN * 0.15} \
+            z \
+            M ${LEN * 0.5} ${LEN * 0.3} \
+            h ${LEN * 0.1} \
+            C ${LEN * 0.725} ${LEN * 0.3} ${LEN * 0.725} ${LEN * 0.45} ${LEN * 0.6} ${LEN * 0.45} \
+            h ${-LEN *0.1} v ${-LEN *0.15} \
+            m 0 ${LEN * 0.25} \
+            h ${LEN * 0.1} \
+            C ${LEN * 0.725} ${LEN * 0.55} ${LEN * 0.725} ${LEN * 0.7} ${LEN * 0.6} ${LEN * 0.7} \
+            h ${-LEN *0.1} \
+            z
+        `);
+        b.setAttribute("fill-rule", "evenodd");
+        b.setAttribute("stroke", "#000000");
+        b.setAttribute("stroke-width", "5");
+        b.setAttribute("fill", "#00ff00");
+        svg.appendChild(b);
+
+        // TODO bend top right corner of T to align with B (replace h ${LEN * 0.1} with bend)
+        const t = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        t.setAttribute("d", `\
+            M ${LEN * 0.2} ${LEN * 0.2} \
+            h ${LEN * 0.4} \
+            Q ${LEN * 0.675} ${LEN * 0.2} ${LEN * 0.7} ${LEN * 0.215} \
+            L ${LEN * 0.665} ${LEN * 0.32} \
+            Q ${LEN * 0.65} ${LEN * 0.305} ${LEN * 0.6} ${LEN * 0.3} \
+            h ${-LEN * 0.1} v ${LEN * 0.05} \
+            l ${-LEN * 0.1} ${LEN * 0.1} \
+            v ${-LEN * 0.15} h ${-LEN * 0.2} v ${-LEN * 0.1} \
+            z \
+            M ${LEN * 0.4} ${LEN * 0.5} \
+            l ${LEN * 0.1} ${-LEN * 0.1} \
+            v ${LEN * 0.05} \
+            l ${-LEN * 0.1} ${LEN * 0.1} \
+            v ${-LEN * 0.05} \
+            z \
+            M ${LEN * 0.4} ${LEN * 0.65} \
+            l ${LEN * 0.1} ${-LEN * 0.1} \
+            v ${LEN * 0.05} \
+            l ${-LEN * 0.1} ${LEN * 0.1} \
+            v ${-LEN * 0.05} \
+            z \
+            M ${LEN * 0.4} ${LEN * 0.75} \
+            l ${LEN * 0.1} ${-LEN * 0.1} \
+            v ${LEN * 0.15} h ${-LEN * 0.1} v ${-LEN * 0.1} \
+            z
+
+        `);
+        t.setAttribute("stroke", "#000000");
+        t.setAttribute("stroke-width", "5");
+        t.setAttribute("fill", "#ffffff");
+        svg.appendChild(t);
+
+        const signature = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        signature.innerHTML = "Arcky";
+        signature.setAttribute("x", `${LEN * 0.42}`);
+        signature.setAttribute("y", `${LEN * 0.785}`);
+        signature.setAttribute("textLength", `${LEN * 0.06}`);
+        svg.appendChild(signature);
+
+        document.body.appendChild(svg);
+    </script>
+</body>
+</html>

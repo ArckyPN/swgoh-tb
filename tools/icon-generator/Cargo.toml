@@ -1,0 +1,12 @@
+[package]
+name = "icon-generator"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+resvg = "0.45.1"
+svg = "0.18.0"
+svg_to_ico = "1.2.0"
+
+[lints]
+workspace = true

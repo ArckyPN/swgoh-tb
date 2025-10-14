@@ -14,8 +14,6 @@ pub struct App {
     origin: String,
 }
 
-// TODO replace the images in assets/ with custom made ones (adjust in manifest.json and index.html and check if used in other locations)
-
 impl App {
     /// Called once before the first frame.
     pub fn new(cc: &eframe::CreationContext<'_>, window: web_sys::Window) -> Self {
