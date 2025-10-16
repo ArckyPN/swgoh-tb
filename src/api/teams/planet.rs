@@ -5,6 +5,7 @@ use serde::Deserialize;
 #[derive(Debug, Clone, Deserialize)]
 pub struct Planet {
     pub name: String,
+    pub notes: Option<Vec<String>>,
     #[serde(rename = "mission")]
     pub missions: Vec<Mission>,
 }

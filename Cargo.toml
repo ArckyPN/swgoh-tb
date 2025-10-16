@@ -4,15 +4,15 @@ version = "0.1.0"
 authors = ["Philip Nys <philip.nys@proton.me>"]
 edition = "2024"
 include = ["LICENSE-APACHE", "LICENSE-MIT", "**/*.rs", "Cargo.toml"]
-rust-version = "1.85"
+rust-version = "1.88"
 
 [package.metadata.docs.rs]
 all-features = true
 targets = ["wasm32-unknown-unknown"]
 
 [dependencies]
-egui = "0.32"
-eframe = { version = "0.32", default-features = false, features = [
+egui = "0.33"
+eframe = { version = "0.33", default-features = false, features = [
     "accesskit",     # Make egui compatible with screen readers. NOTE: adds a lot of dependencies.
     "default_fonts", # Embed the default egui fonts.
     "glow",          # Use the glow rendering backend. Alternative: "wgpu".
@@ -26,7 +26,8 @@ log = "0.4.27"
 serde = { version = "1.0.219", features = ["derive"] }
 toml = "0.9.7"
 strum-lite = "0.1.1"
-egui_extras = { version = "0.32.3", features = ["all_loaders"] }
+egui_extras = { version = "0.33", features = ["all_loaders"] }
+egui_commonmark = "0.22.0"
 image = { version = "0.25.8", features = ["webp", "png"] }
 
 # native:

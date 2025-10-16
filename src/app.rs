@@ -2,6 +2,8 @@
 
 use std::str::FromStr as _;
 
+use egui_commonmark::{CommonMarkCache, CommonMarkViewer};
+
 use crate::{Mission, Omicron, Omicrons, Planet, Resolution, Tab, Teams, Unit, Units, Video};
 
 const CAPITAL_SHIP_FACTOR: f32 = 1.1;
@@ -63,7 +65,6 @@ impl App {
         }
     }
 
-    // TODO make stuff bigger, too small on most screens
     fn character_icon_size(&self) -> egui::Vec2 {
         let base = self.resolution().width;
         let size = base / if !self.is_portrait() { 24. } else { 8. };
@@ -110,12 +111,17 @@ impl App {
     }
 
     fn render_planet(&self, ui: &mut egui::Ui, planet: &Planet) {
-        ui.vertical_centered(|ui| {
-            ui.label(
-                egui::RichText::new(&planet.name)
-                    .strong()
-                    .size(self.planet_font_size()),
-            );
+        ui.vertical(|ui| {
+            ui.vertical_centered(|ui| {
+                ui.label(
+                    egui::RichText::new(&planet.name)
+                        .strong()
+                        .size(self.planet_font_size()),
+                );
+            });
+            if let Some(notes) = &planet.notes {
+                self.render_note(ui, notes);
+            }
             for mission in &planet.missions {
                 self.render_mission(ui, mission);
             }
@@ -382,40 +388,6 @@ impl App {
         missing
     }
 
-    fn render_info(&self, ui: &mut egui::Ui) {
-        let text = |text: &str| egui::RichText::new(text).size(self.note_font_size());
-
-        ui.horizontal(|ui| {
-            ui.label(text(
-                "This website provides ideal teams to master the Territory Battle ",
-            ));
-            ui.label(text("Rise of the Empire").monospace());
-            ui.label(text(" in Star Wars: Galaxy of Heroes."));
-        });
-
-        ui.add_space(20.);
-
-        ui.horizontal(|ui| {
-            ui.label(text("The information is based on a combination of personal experience by myself and my guild and the websites "));
-            ui.hyperlink_to(text("https://genskaar.github.io/tb_empire/").monospace(), "https://genskaar.github.io/tb_empire/");
-            ui.label(text(" and "));
-            ui.hyperlink_to(text("https://www.swgohrote.com/").monospace(), "https://www.swgohrote.com/");
-            ui.label(".");
-        });
-
-        ui.add_space(20.);
-
-        ui.horizontal(|ui| {
-            ui.label(text("The major contribution I am bringing, which the other sites aren't doing, is providing a recommendation of teams to use without any overlap per phase. This way one is able to easily look up teams to clear a full phase or get an idea on which teams to build up."));
-        });
-
-        ui.add_space(20.);
-
-        ui.horizontal(|ui| {
-            ui.label(text("Where possible, I prefer teams which are able to full auto missions (without Omicrons). When full auto is not possible, I will give alternatives."));
-        });
-    }
-
     fn render_search(&mut self, ui: &mut egui::Ui) {
         ui.group(|ui| {
             ui.horizontal(|ui| {
@@ -490,11 +462,19 @@ impl eframe::App for App {
         });
 
         egui::CentralPanel::default().show(ctx, |ui| {
+            ui.style_mut().url_in_tooltip = true;
             egui::ScrollArea::vertical().show(ui, |ui| {
                 self.render_search(ui);
 
                 match self.tab {
-                    Tab::Info => self.render_info(ui),
+                    Tab::Info => {
+                        let mut cache = CommonMarkCache::default();
+                        CommonMarkViewer::new().show(
+                            ui,
+                            &mut cache,
+                            include_str!("../assets/data/INFO.md"),
+                        );
+                    }
                     Tab::Phase(x) => self.render_phase(ui, x - 1),
                 }
 
