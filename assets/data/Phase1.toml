@@ -1,73 +1,76 @@
 [Dark]
 name = "Mustafar"
+notes = [
+    "This planet has lots of alternative options.",
+    "For brevity I list only one the cheaper option each mission. (the Info tab can help you find the details)"
+]
 
 [[Dark.mission]]
 id = "P1DLV"
 name = "Lord Vader Combat Mission"
 team = [ "LV", "", "", "", "" ]
 note = [
-    "Full Auto"
+    "Full Auto."
 ]
 relic = 5
 # omicrons = [
 #     { unit = "lv", omis = ["b", "s1", "s12", "l", "u1", "u2", "l" ] },
 #     { unit = "jkr", omis = ["l"] }
 # ]
-# videos = [
-#     { src = "Rick Astley", url = "http://youtube.com/..." },
-#     { src = "Bob Ross", url = "http://twitch.tv/..." }
-# ]
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=YIOTKDpWtRM" },
+]
 # modding = "https://img.com/...png"
 
 [[Dark.mission]]
 id = "P1DCM1"
-name = "Left Combat Mission"
-team = [ "SEE", "Malak", "revan", "SASS", "Wat" ]
+name = "Left Combat Mission (Nute Gunray)"
+team = [ "trench", "jango", "nute", "dooku", "Wat" ]
 note = [
-    "Full Auto"
+    "Tank Tech on Jango, target Droideka. Full Auto.",
+    "Possible alternatives are SEE, Great Mothers, Reva, SLKR, Grievous, Talzin."
 ]
 relic = 5
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=zLFGIuSzFW0" },
+]
 
 [[Dark.mission]]
 id = "P1DCM2"
-name = "Top Combat Mission"
-team = [ "SLKR", "DRey", "KRU", "fos", "Hux" ]
+name = "Top Combat Mission (Geonosians)"
+team = [ "gm", "elsbeth", "night", "dtp", "merrin" ]
 note = [
-    "Poke Droideka, then Full Auto"
+    "Doom Droideka, bless Morgan. Full Auto.",
+    "Possible alternatives are SLKR, Reva.",
 ]
 relic = 5
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=zjxxsvQos5Y" },
+]
 
 [[Dark.mission]]
 id = "P1DCM3"
-name = "Right Combat Mission"
+name = "Right Combat Mission (Wat Tambor)"
 team = [ "Reva", "GI", "7Sis", "8Bro", "5Bro" ]
 note = [
-    "Full Auto"
+    "Target Droideka. Full Auto.",
+    "Possible alternatives are Great Mothers, SLKR, Talzin.",
 ]
 relic = 5
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=Pk9v02K5wwc" },
+]
 
 [[Dark.mission]]
 id = "P1DF"
 name = "Fleet"
 team = [ "lev", "scythe", "b28", "MK6", "sassShip", "vaderShip", "maulShip", "[ph]" ]
 note = [
-    "full auto, highly inconsistent"
+    "Full Auto, highly inconsistent.",
 ]
-
-[[Dark.mission]]
-id = "P1DF"
-name = "Fleet"
-team = [ "Executrix", "scythe", "MK6", "vaderShip", "TDC", "TieInterceptor", "Gauntlet", "palpMobil" ]
-note = [
-    "manual, highly RNG-dependent (TIE Defender needs to dodge a lot)"
-]
-
-[[Dark.mission]]
-id = "P1DF"
-name = "Fleet"
-team = [ "Executrix", "scythe", "sassShip", "vaderShip", "TDC", "TieInterceptor", "Gauntlet", "palpMobil" ]
-note = [
-    "manual, highly RNG-dependent (TIE Defender needs to dodge a lot)"
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=xCuGwcVtd98" },
+    { src = "Egnards", url = "https://www.youtube.com/watch?v=ahVD4QBYne4" },
 ]
 
 [Mixed]
@@ -78,112 +81,125 @@ id = "P1MJ"
 name = "Jabba Combat Mission"
 team = [ "Jabba", "Krrsantan", "Boushh", "Boba", "Skiff" ]
 note = [
-    "Full Auto"
+    "Full Auto."
 ]
 relic = 5
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=W_GayJRsWy4" },
+]
 
 [[Mixed.mission]]
 id = "P1MDA"
 name = "Aphra Combat Mission"
 team = [ "Aphra", "Rey", "JTR", "bb8", "ben" ]
 note = [
-    "Full Auto"
+    "Full Auto."
 ]
 relic = 5
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=dNNTaMIUjD8" },
+]
 
 [[Mixed.mission]]
 id = "P1MCM"
 name = "Combat Mission"
 team = [ "bkm", "bando", "paz", "Bo", "ig12" ]
 note = [
-
+    "Full Auto."
 ]
 relic = 5
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=DEytmo8fFC0" },
+]
 
 [[Mixed.mission]]
 id = "P1MSM"
 name = "Qi'ra Special Mission"
-team = [ "qira", "yan", "r2", "drogan", "leia" ]
+team = [ "qira", "leia", "r2", "drogan", "yan" ]
 note = [
-    "Full Auto"
+    "Full Auto."
 ]
 relic = 5
-
-[[Mixed.mission]]
-id = "P1MF"
-name = "Fleet"
-team = [ "exec", "ht", "p1", "xb", "PrisonerWithJobOne", "ig2k", "[ph]", "[ph]" ]
-note = [
-    "Full Auto"
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=iViRHC81yvs" },
 ]
 
 [[Mixed.mission]]
 id = "P1MF"
 name = "Fleet"
-team = [ "exec", "ht", "p1", "rc", "xb", "PrisonerWithJobOne", "ig2k", "[ph]" ]
+team = [ "exec", "ht", "landoShip", "p1", "xb", "PrisonerWithJobOne", "ig2k", "[ph]" ]
 note = [
-    "Full Auto"
+    "Full Auto. Use Razor Crest if not platooned in place of Punishing One.",
+]
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=Qzduxv0BJx8" },
 ]
 
 [Light]
 name = "Coruscant"
+notes = [
+    "The two CMs are the very same and have a number of options.",
+    "Options are Queen Amidala, Jedi Master Mace, Saw + Luthen."
+]
 
 [[Light.mission]]
-id = "P1LMace"
+id = "P1LMK"
 name = "Mace + Kit Combat Mission"
 team = [ "mace", "jmk", "gas", "snips", "fisto" ]
 note = [
-    "Full Auto"
+    "Full Auto."
 ]
 relic = 5
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=sC8Srr7-ziM" },
+]
 
 [[Light.mission]]
-id = "P1LJedi"
+id = "P1LJ"
 name = "Jedi Combat Mission"
 team = [ "jml", "jkl", "hoda", "gmy", "jkr" ]
 note = [
-    "Full Auto"
+    "Full Auto."
 ]
 relic = 5
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=9l_PmvdNH1U" },
+]
 
 [[Light.mission]]
 id = "P1LCM"
 name = "Combat Mission"
-team = [ "glat", "padawren", "theBetterEzra", "huyang", "GenSyn" ]
+team = [ "glat", "[ph]", "[ph]", "[ph]", "[ph]" ]
 note = [
-    "Full Auto"
+    "Full Auto.",
+    "Any Spectre work, even without Exile Ezra.",
 ]
 relic = 5
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=lGY7TLSTCMA" },
+]
 
 [[Light.mission]]
 id = "P1LCM"
 name = "Combat Mission"
-team = [ "bamf", "depa", "templeguard", "jocasta", "aayla" ]
+team = [ "padme", "snips", "gk", "jka", "cat" ]
 note = [
-    "Full Auto"
+    "Full Auto.",
+    "Video shows OG Mace in place of Kenobi, but you should use Kenobi, because Mace is required for his own mission."
 ]
 relic = 5
-
-[[Light.mission]]
-id = "P1LF"
-name = "Fleet"
-team = [ "prof", "dashShip", "milf", "ywingRebel", "ghost", "phantom", "r1", "[ph]" ]
-note = [
-    "Full Auto"
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=zwCGO6aeGNY" }
 ]
 
 [[Light.mission]]
 id = "P1LF"
 name = "Fleet"
-team = [ "Raddus", "dashShip", "roseShip", "PoeShip", "ResX", "zoriiShip", "[ph]", "[ph]" ]
+team = [ "prof", "dashShip", "milf", "ywingRebel", "ghost", "phantom", "[ph]", "[ph]" ]
 note = [
-    "Full Auto"
+    "Full Auto.",
+    "Raddus and Neogiator are cheaper alternatives, which are just as easy full autos."
 ]
-
-[[Light.mission]]
-id = "P1LF"
-name = "Fleet"
-team = [ "Negotiator", "dashShip", "jkaShip", "bbShip", "ywing", "snipShip", "fivesShip", "[ph]" ]
-note = [
-    "Full Auto"
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=eInUd3NBMQU" }
 ]
