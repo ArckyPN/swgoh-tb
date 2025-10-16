@@ -38,3 +38,8 @@ impl Default for Tab {
         Self::Phase(1)
     }
 }
+
+pub struct Resolution {
+    pub height: f32,
+    pub width: f32,
+}

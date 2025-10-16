@@ -2,7 +2,7 @@
 
 use std::str::FromStr as _;
 
-use crate::{Mission, Omicron, Omicrons, Planet, Tab, Teams, Unit, Units, Video};
+use crate::{Mission, Omicron, Omicrons, Planet, Resolution, Tab, Teams, Unit, Units, Video};
 
 const CAPITAL_SHIP_FACTOR: f32 = 1.1;
 const STARTING_LINEUP_FACTOR: f32 = 0.9;
@@ -46,52 +46,50 @@ impl App {
     }
 
     /// screen resolution (width, height) in pixels
-    fn resolution(&self) -> (f32, f32) {
-        (
-            self.window
-                .inner_width()
-                .expect("missing width")
-                .as_f64()
-                .expect("is number") as f32,
-            self.window
+    fn resolution(&self) -> Resolution {
+        Resolution {
+            height: self
+                .window
                 .inner_height()
                 .expect("missing height")
                 .as_f64()
                 .expect("is number") as f32,
-        )
+            width: self
+                .window
+                .inner_width()
+                .expect("missing width")
+                .as_f64()
+                .expect("is number") as f32,
+        }
     }
 
-    fn reference_size(&self) -> f32 {
-        let res = self.resolution();
-        if self.is_portrait() { res.0 } else { res.1 }
-    }
-
+    // TODO make stuff bigger, too small on most screens
     fn character_icon_size(&self) -> egui::Vec2 {
-        let base = self.reference_size();
-        let size = base / 20.;
+        let base = self.resolution().width;
+        let size = base / if !self.is_portrait() { 24. } else { 8. };
         egui::Vec2::new(size, size)
     }
 
     fn planet_font_size(&self) -> f32 {
-        self.reference_size() / 40.
+        self.resolution().width / if !self.is_portrait() { 40. } else { 10. }
     }
 
     fn mission_font_size(&self) -> f32 {
-        self.reference_size() / 60.
+        self.resolution().width / if !self.is_portrait() { 60. } else { 15. }
     }
 
     fn note_font_size(&self) -> f32 {
-        self.reference_size() / 70.
+        self.resolution().width / if !self.is_portrait() { 70. } else { 70. / 2. }
     }
 
     fn unit_font_size(&self) -> f32 {
-        self.reference_size() / 135.
+        self.resolution().width / if !self.is_portrait() { 135. } else { 135. / 2. }
     }
 
     fn is_portrait(&self) -> bool {
         let res = self.resolution();
 
-        res.1 > res.0
+        res.height > res.width
     }
 
     fn render_phase(&self, ui: &mut egui::Ui, idx: usize) {
