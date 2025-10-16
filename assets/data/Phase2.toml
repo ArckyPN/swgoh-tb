@@ -6,43 +6,42 @@ id = "P2DNexu"
 name = "Top Combat Mission (Nexu)"
 team = [ "reva", "GI", "7sis", "8bro", "5bro" ]
 note = [ 
-    "Start with Grand Inquisitor Special 2, then Full Auto"
+    "Start with Grand Inquisitor Special 2, then Full Auto."
 ]
 relic = 6
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=x3lQbmRbC0U" },
+]
 
 [[Dark.mission]]
 id = "P2DReek"
 name = "Left Combat Mission (Reek)"
 team = [ "lv", "appo", "scorch", "cx2", "dct" ]
-note = [ "Full Auto" ]
-relic = 6
-
-[[Dark.mission]]
-id = "P2DReek"
-name = "Left Combat Mission (Reek)"
-team = [ "lv", "evilMJ", "royalGuard", "piett", "thrawn" ]
-note = [ "Full Auto" ]
-relic = 6
-
-[[Dark.mission]]
-id = "P2DAcklay"
-name = "Bottom Combat Mission (Acklay)"
-team = [ "slkr", "drey", "kru", "hux", "foo" ]
-note = [ "Full Auto" ]
+note = [
+    "Full Auto.",
+    "This one is untested, but I deduced that it should work easily. Please someone confirm for me."
+]
 relic = 6
 
 [[Dark.mission]]
 id = "P2DAcklay"
 name = "Bottom Combat Mission (Acklay)"
 team = [ "slkr", "redLobster", "kru", "hux", "foo" ]
-note = [ "Full Auto, prefer to use the above Dark Rey version." ]
+note = [
+    "Full Auto. Use Dark Rey if you have her."
+]
 relic = 6
+videos = [
+    { src = "Egnards", url = "https://www.youtube.com/watch?v=vvGaQA5SWYQ" },
+]
 
 [[Dark.mission]]
 id = "P2DGeo"
 name = "Geonosian Combat Mission"
 team = [ "gba", "geoSo", "sunF***", "geoSpy", "poggle" ]
-note = [ "Auto seems to be not possible (haven't found a video, yet, and I can't do this mission myself, yet 3/5)" ]
+note = [
+    "Auto seems to be not possible (haven't found a video, yet, and I can't do this mission myself, yet 3/5)"
+]
 relic = 7
 
 [[Dark.mission]]
@@ -68,27 +67,20 @@ note = [
     "Full Auto. Ezra is mandatory! Minimum R8, ideally R9."
 ]
 relic = 6
+videos = [
+    { src = "Pico SWGOH", url = "https://www.youtube.com/watch?v=j6c_GgoPyws&t=470s" }
+]
 
 [[Mixed.mission]]
 id = "P2MHO"
 name = "Hondo Ohnaka Combat Mission"
 team = [ "baylan", "hondo", "shin", "marrok", "qira" ]
 note = [
-    "Manual. Very easy.",
-    "TODO: make and add video",
+    "Unselect Targets in Wave 1. Target Tarkin in Wave 2. Full Auto.",
 ]
 relic = 6
-
-[[Mixed.mission]]
-id = "P2MHO"
-name = "Hondo Ohnaka Combat Mission"
-team = [ "fomega", "hondo", "wreckerMerc", "crosshair", "hunterMerc" ]
-note = [
-    "Full Auto. Requires Wrecker Omicron, though."
-]
-relic = 6
-omicrons = [
-    { unit = "wreckerMerc", omis = ["u1"] }
+videos = [
+    { src = "Arcky", url = "https://www.youtube.com/watch?v=8FMsQ5zM9IQ" }
 ]
 
 [[Mixed.mission]]
@@ -96,33 +88,34 @@ id = "P2MJ"
 name = "Jabba Combat Mission"
 team = [ "Jabba", "Krrsantan", "Boushh", "Boba", "Skiff" ]
 note = [
-    "Full Auto. Boba can be replaced with any Hutt Cartel."
+    "Full Auto."
 ]
 relic = 6
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=1Cu754InVBc" }
+]
 
 [[Mixed.mission]]
 id = "P2MCM"
 name = "Combat Mission"
 team = [ "bkm", "bando", "paz", "bo", "ig12" ]
 note = [
-    "Full Auto."
+    "Full Auto.",
 ]
 relic = 6
-
-[[Mixed.mission]]
-id = "P2MF"
-name = "Fleet"
-team = [ "exec", "ht", "rc", "xb", "PrisonerWithJobOne", "ig2k", "", "" ]
-note = [
-    "Full Auto. Razor Crest is key."
+videos = [
+    { src = "Arcky", url = "https://www.youtube.com/watch?v=bLKQriZVp_4" },
 ]
 
 [[Mixed.mission]]
 id = "P2MF"
 name = "Fleet"
-team = [ "exec", "ht", "rc", "p1", "xb", "PrisonerWithJobOne", "ig2k", "", "" ]
+team = [ "exec", "ht", "rc", "p1", "xb", "PrisonerWithJobOne", "ig2k", "" ]
 note = [
-    "Full Auto. Razor Crest is key."
+    "Full Auto. Razor Crest is key.",
+]
+videos = [
+    { src = "Egnards", url = "https://www.youtube.com/watch?v=TMQZ4iO_V4w" },
 ]
 
 [[Mixed.mission]]
@@ -131,6 +124,9 @@ name = "Fleet"
 team = [ "malev", "vulture", "hyena", "sunF***Ship", "geoSpyShip", "geoSoShip", "", "" ]
 note = [
     "Full Auto. In case you had to platoon Executor or Razor Crest."
+]
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=ssTdWAi0jOs" },
 ]
 
 [Light]
@@ -151,9 +147,9 @@ note = [
     "",
     "Wave 2/2:",
     "\tSame as Wave 1. Focus fire the Purge Trooper. Use Instant-kill to clear Trilla.",
-    "TODO: add modding image",
 ]
 relic = 7
+modding = "https://api.hotutils.com/generated/30124_c77b0242-42c8-4c67-8abf-4b3e89c6e9f9.png"
 
 [[Light.mission]]
 id = "P2LSM"
@@ -166,15 +162,21 @@ relic = 7
 omicrons = [
     { unit = "jkc", omis = ["s1", "s3"] }
 ]
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=Ad_cJiVLLY0" },
+]
 
 [[Light.mission]]
 id = "P2LJ"
 name = "Jedi Combat Mission"
 team = [ "bamf", "depa", "aayla", "jocasta", "templeguard" ]
 note = [
-    "Full Auto. TODO: verify!"
+    "Full Auto."
 ]
 relic = 6
+videos = [
+    { src = "Arcky", url = "https://www.youtube.com/watch?v=sIDofEpJHXs" },
+]
 
 [[Light.mission]]
 id = "P2LCM1"
@@ -184,13 +186,22 @@ note = [
     "Full Auto. Might get unlucky is Leia is below R8."
 ]
 relic = 6
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=fFO75yKREfA" },
+]
 
 [[Light.mission]]
 id = "P2LCM2"
 name = "Right Combat Mission (Second Sister)"
-team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = [ "TODO: Padme CAT?" ]
+team = [ "glat", "padawren", "theBetterEzra", "huyang", "gensyn" ]
+note = [
+    "Full Auto.",
+    "Video is without Ezra and General Syndulla, but they should make this mission significantly easier."
+]
 relic = 6
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=aP8-BIqw0jk" },
+]
 
 [[Light.mission]]
 id = "P2LF"
@@ -198,4 +209,7 @@ name = "Fleet"
 team = [ "prof", "milf", "dashShip", "ywingRebel", "r1", "phantom", "ghost", "" ]
 note = [
     "Target Scythe. Full Auto."
+]
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=dD9Eey116EY" },
 ]

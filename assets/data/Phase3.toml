@@ -4,37 +4,77 @@ name = "Dathomir"
 [[Dark.mission]]
 id = "P3DSM"
 name = "Merrin Special Mission"
-team = [ "[ph]", "[ph]", "[ph]", "[ph]", "merrin" ]
-note = [ "TODO: add team" ]
+team = [ "gm", "elsbeth", "dtp", "night", "merrin" ]
+note = [
+    "Blees Morgan, try to Doom Maul in Wave 2. Full Auto."
+]
 relic = 7
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=ldzz1yHeeWY" },
+]
 
 [[Dark.mission]]
 id = "P3DE"
 name = "Empire Combat Mission"
-team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = [ "TODO: add team" ]
+team = [ "lv", "appo", "scorch", "cx2", "dct" ]
+note = [
+    "Full Auto. Any Empire units can work, except Piett."
+]
 relic = 7
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=Ap_rIhILZBM" },
+]
 
 [[Dark.mission]]
 id = "P3DDA"
 name = "Aphra Combat Mission"
-team = [ "aphra", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = [ "TODO: add team" ]
+team = [ "aphra", "bt1", "trip", "ig88", "hk47" ]
+note = [
+    "Manual is the only way to get 2/2 without requiring an Omicron to auto."
+]
 relic = 7
+videos = [
+    { src = "BitDynasty", url = "https://www.youtube.com/watch?v=uZxgBx1S91E&t=193s" }
+]
+
+[[Dark.mission]]
+id = "P3DDA"
+name = "Aphra Combat Mission"
+team = [ "aphra", "bt1", "trip", "vader", "ipd" ]
+note = [
+    "Full Auto."
+]
+relic = 7
+omicrons = [
+    { unit = "ipd", omis = [ "u1" ] },
+]
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=MTkMzJMayUA" }
+]
 
 [[Dark.mission]]
 id = "P3DCM"
 name = "Combat Mission"
-team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = [ "TODO: add team" ]
+team = [ "Trench", "jango", "wat", "dooku", "nute" ]
+note = [
+    "Full Auto."
+]
 relic = 7
+videos = [
+    { src = "Pico SWGOH", url = "https://www.youtube.com/watch?v=KBeqsI-Xkd0&t=110s" }
+]
 
 [[Dark.mission]]
 id = "P3DCM"
 name = "Combat Mission"
-team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = [ "TODO: add team" ]
+team = [ "slkr", "drey", "kru", "kylo", "redLobster" ]
+note = [
+    "Poke at the start of each Wave. Inconsistent without Dark Rey. Full Auto."
+]
 relic = 7
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=grmLuLr-XG0" }
+]
 
 [Mixed]
 name = "Tatooine"
@@ -43,43 +83,86 @@ name = "Tatooine"
 id = "P3MJ"
 name = "Jabba Combat Mission"
 team = [ "Jabba", "Krrsantan", "Boushh", "Boba", "Skiff" ]
-note = [ "TODO: add team" ]
+note = [
+    "Full Auto."
+]
 relic = 7
 
 [[Mixed.mission]]
 id = "P3MFS"
 name = "Fennec Shand Combat Mission"
-team = [ "[ph]", "[ph]", "[ph]", "[ph]", "fennec" ]
-note = [ "TODO: add team" ]
+team = [ "baylan", "marrok", "hondo", "shin", "fennec" ]
+note = [
+    "TODO: verify if this can auto + record it"
+]
 relic = 7
 
 [[Mixed.mission]]
 id = "P3MCM"
 name = "Combat Mission"
-team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = [ "TODO: add team" ]
+team = [ "quadme", "mqg", "cup", "pow", "jka" ]
+note = [
+    "Full auto. (TODO: find a replacement for jka?"
+]
 relic = 7
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/shorts/yYyHdBfnblc" }
+]
 
 [[Mixed.mission]]
 id = "P3MSM"
 name = "Reva Special Mission"
-team = [ "GI", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = [ "TODO: add team" ]
+team = [ "GI", "reva", "7sis", "8bro", "5bro" ]
+note = [
+    "No AoEs until one unit has 6 stacks of Purge. GI gets a bonus turn and use Special 2 on them (Gives Tenacity up to everyone). Full Auto.",
+    "Video shows a messy run and still wins with the auto.",
+    "Mod for as much Protection as possible and as little health as possible to mitigate Thermal Detonators. (See the attached example modding)"
+]
 relic = 7
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=q1lYPCfhpUA" }
+]
+modding = "https://api.hotutils.com/generated/30124_d96c0667-ceb5-4781-9485-d2a07f1ec96c.png"
+
+[[Mixed.mission]]
+id = "P3MSM"
+name = "Reva Special Mission"
+team = [ "GI", "marrok", "[ph]", "[ph]", "[ph]" ]
+note = [
+    "Marrok Omicrons trivialized this mission. Any three Inquisitor adds work. Full Auto."
+]
+relic = 7
+omicrons = [
+    { unit = "marrok", omis = [ "u1" ] }
+]
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=fpPe_Damg9I" }
+]
 
 [[Mixed.mission]]
 id = "P3MM"
 name = "Mandalore Special Mission"
 team = [ "bkm", "ig12", "bando", "", "" ]
-note = [ "TODO: add team" ]
+note = [
+    "Video shows a semi-auto method. Personally I prefer to play manual.",
+    "Focus only on the Krayt Dragon. Use cleanse when KD spits. Use Ballista is KD eats someone."
+]
 relic = 7
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=x2D1hwUiHjw" }
+]
 
 [[Mixed.mission]]
 id = "P3MF"
 name = "Fleet"
-team = [ "exec", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = [ "TODO: add team" ]
+team = [ "exec", "ht", "xb", "p1", "ig2k", "[ph]", "[ph]", "[ph]" ]
+note = [
+    "Full Auto. Use Razor Crest and Slave I is not platooned."
+]
 relic = 0
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=rcqIa6VlXHs" }
+]
 
 [Light]
 name = "Kashyyyk"
@@ -87,37 +170,60 @@ name = "Kashyyyk"
 [[Light.mission]]
 id = "P3LW"
 name = "Wookiee Combat Mission"
-team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = [ "TODO: add team" ]
+team = [ "tarfull", "chewpio", "bigz", "chewie", "cwc" ]
+note = [
+    "Video has R8 Wookiees, but looks easy and is probably doable with R7. Full Auto."
+]
 relic = 7
+videos = [
+    { src = "Pico SWGOH", url = "https://www.youtube.com/watch?v=TY97HzhePAg&t=463s" }
+]
 
 [[Light.mission]]
 id = "P3LSM"
 name = "Saw Gerrera Special Mission"
-team = [ "saw", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = [ "TODO: add team" ]
+team = [ "saw", "[ph]", "cancelled", "luthen", "[ph]" ]
+note = [
+     "TODO: add team" 
+]
 relic = 7
 
 [[Light.mission]]
 id = "P3LCM1"
 name = "Left Combat Mission"
-team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = [ "TODO: add team" ]
+team = [ "glat", "padawren", "huyang", "fulcrum", "gensyn" ]
+note = [
+    "Full Auto. Use Ezra elsewhere."
+]
 relic = 7
+videos = [
+    { src = "Pico SWGOH", url = "https://www.youtube.com/watch?v=SWi--w5QKws" }
+]
 
 [[Light.mission]]
 id = "P3LCM2"
 name = "Right Combat Mission"
-team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = [ "TODO: add team" ]
+team = [ "jml", "jkl", "theBetterEzra", "[ph]", "[ph]" ]
+note = [
+    "Full Auto. Ezra is mandatory."
+]
 relic = 7
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=6LCLkhSg5AY" }
+]
 
 [[Light.mission]]
 id = "P3LF"
 name = "Fleet"
-team = [ "prof", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = [ "TODO: add team" ]
+team = [ "prof", "milf", "ywingRebel", "dashShip", "phantom", "ghost", "r1", "[ph]" ]
+note = [
+    "Full Auto.",
+    "If you had to platoon Falcon, check out the video."
+]
 relic = 0
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=El32c9zggjA" }
+]
 
 [Bonus]
 
@@ -126,34 +232,54 @@ name = "Zeffo"
 [[Bonus.mission]]
 id = "P3BSM"
 name = "Clone Trooper Special Mission"
-team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = [ "TODO: add team" ]
+team = [ "rex", "oldrex", "arc", "echo", "fives" ]
+note = [
+    "Unselected Target in Wave 1. Target Consular in Wave 2. Full Auto."
+]
 relic = 7
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=SvUzVopG8a4" }
+]
 
 [[Bonus.mission]]
 id = "P3BC"
 name = "Jedi Knight Cal Kestis Combat Mission"
 team = [ "jkc", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = [ "TODO: add team" ]
+note = [
+    "TODO: Find full auto without Omicron or overlap"
+]
 relic = 7
 
 [[Bonus.mission]]
 id = "P3BUFU"
 name = "Unaligned Force User Combat Mission"
-team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = [ "TODO: add team" ]
+team = [ "rey", "cat", "ben", "cere", "jtr" ]
+note = [
+    "CAT is mandatory. Only ~70% success rate on Full Auto."
+]
 relic = 7
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=LQbMxA3Oqcs" },
+    { src = "Egnards", url = "https://www.youtube.com/watch?v=weXoe5KzFaY" },
+]
 
 [[Bonus.mission]]
 id = "P3BCM"
 name = "Combat Mission"
 team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = [ "TODO: add team" ]
+note = [
+    "TODO: Find full auto without Omicron or overlap"
+]
 relic = 7
 
 [[Bonus.mission]]
 id = "P3BF"
 name = "Fleet"
-team = [ "negotiator", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
-note = [ "TODO: add team" ]
+team = [ "negotiator", "jkaShip", "bbShip", "ywing", "snipShip", "fivesShip", "rexShip", "[ph]" ]
+note = [
+    "Full Auto."
+]
 relic = 0
+videos = [
+    { src = "cptsolo", url = "https://www.youtube.com/watch?v=h4nS7Flp4Zk" }
+]
