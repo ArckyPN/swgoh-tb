@@ -116,7 +116,7 @@ impl UnitsCrawler {
                 .attr("href")
                 .await?
                 .context("missing add button")?;
-            let file_name = url.split('/').last().context("missing file name")?;
+            let file_name = url.split('/').next_back().context("missing file name")?;
 
             let path = std::env::current_dir()?.join(file_name);
             // download it if wasn't before / a new version is released
@@ -178,7 +178,6 @@ impl UnitsCrawler {
                     }
                     x => {
                         log::debug!("skipping {x:?} character card");
-                        continue;
                     }
                 }
             }
@@ -221,7 +220,7 @@ impl UnitsCrawler {
         let url = elem.attr("src").await?.context("missing image href")?;
         log::debug!("found image url of {name}: {url}");
 
-        let filename = url.split('/').last().context("missing file name")?;
+        let filename = url.split('/').next_back().context("missing file name")?;
 
         // download image
         log::debug!("downloading image");
