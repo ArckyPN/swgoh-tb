@@ -203,13 +203,13 @@ videos = [
 [[Light.mission]]
 id = "P3LCM2"
 name = "Right Combat Mission"
-team = [ "jml", "jkl", "theBetterEzra", "[ph]", "[ph]" ]
+team = [ "bamf", "depa", "aayla", "jocasta", "templeguard" ]
 note = [
-    "Full Auto. Ezra is mandatory."
+    "Full Auto."
 ]
 relic = 7
 videos = [
-    { src = "cptsolo", url = "https://www.youtube.com/watch?v=6LCLkhSg5AY" }
+    { src = "Arcky", url = "https://www.youtube.com/watch?v=oR53rp36gd4" }
 ]
 
 [[Light.mission]]
