@@ -1,13 +1,13 @@
-use svg::node::element::{Group, Line, Rectangle};
+use svg::node::element::{Group, Line, Rectangle, SVG};
 
-use crate::{FILL_T, STROKE, path};
+use icon_generator::{STROKE, WHITE, path};
 
-pub fn helper(enable: bool) -> Option<Group> {
+pub fn helper(svg: SVG, enable: bool) -> SVG {
     if !enable {
-        return None;
+        return svg;
     }
 
-    Some(
+    svg.add(
         Group::new()
             .add(
                 // white background
@@ -18,7 +18,7 @@ pub fn helper(enable: bool) -> Option<Group> {
                     .set("height", path("1"))
                     .set("stroke", STROKE)
                     .set("stroke-width", "1")
-                    .set("fill", FILL_T),
+                    .set("fill", WHITE),
             )
             .add(
                 // icon frame
@@ -29,7 +29,7 @@ pub fn helper(enable: bool) -> Option<Group> {
                     .set("height", path("0.6"))
                     .set("stroke", STROKE)
                     .set("stroke-width", "3")
-                    .set("fill", FILL_T),
+                    .set("fill", WHITE),
             )
             .add(grid(0.1)),
     )
@@ -42,7 +42,6 @@ fn grid(interval: f32) -> Group {
         lines.push(line(((0., i), (1., i))));
         lines.push(line(((i, 0.), (i, 1.))));
         i += interval;
-        println!("{i}");
         if i >= 1. {
             break;
         }
