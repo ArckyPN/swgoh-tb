@@ -316,6 +316,7 @@ dependencies = [
  "regex",
  "reqwest",
  "serde",
+ "swgoh-tb",
  "thirtyfour",
  "tokio",
  "toml 0.9.8",

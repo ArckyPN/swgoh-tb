@@ -31,7 +31,7 @@ videos = [
 [[Dark.mission]]
 id = "P4DCM"
 name = "Combat Mission"
-team = [ "see", "traya", "malgus", "nihilus", "sion" ]
+team = [ "see", "traya", "malgus", "hungryBoii", "angryBoii" ]
 note = [
     "Full Auto."
 ]
@@ -114,7 +114,7 @@ videos = [
 [[Mixed.mission]]
 id = "P4MF"
 name = "Fleet"
-team = [ "Executor", "ghost", "ht", "rc", "xb", "ig2k", "PrisonersWithJobsOne", "carthShip" ]
+team = [ "exec", "ghost", "ht", "rc", "xb", "ig2k", "PrisonerWithJobOne", "carthShip" ]
 note = [
     "Trying Full Auto is not worth it on this mission. Very difficult.",
     "TODO: add strat from video"
@@ -161,7 +161,7 @@ videos = [
 [[Light.mission]]
 id = "P4LF"
 name = "Fleet"
-team = [ "prof", "ywingRebel", "dashSHip", "biggsX", "wedgeX", "phantom", "[ph]" ]
+team = [ "prof", "ywingRebel", "dashSHip", "biggsShip", "wedgeShip", "phantom", "[ph]" ]
 note = [
     "Full Auto.",
     "Negotiator, Raddus and Home One can also work easily.",

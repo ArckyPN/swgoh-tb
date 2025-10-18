@@ -14,5 +14,7 @@ thirtyfour = "0.36.1"
 tokio = { version = "1.47.1", features = ["full"] }
 toml = "0.9.7"
 
+swgoh-tb = { path = "../.." }
+
 [lints]
 workspace = true

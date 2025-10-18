@@ -63,7 +63,7 @@ relic = 9
 [[Mixed.mission]]
 id = "P5MF"
 name = "Fleet"
-team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
+team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
 note = [ "TODO: add team" ]
 relic = 0
 
@@ -101,6 +101,6 @@ relic = 9
 [[Light.mission]]
 id = "P5LF"
 name = "Fleet"
-team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
+team = [ "[ph]", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]", "[ph]" ]
 note = [ "TODO: add team" ]
 relic = 0

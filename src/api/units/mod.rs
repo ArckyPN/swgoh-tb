@@ -2,12 +2,12 @@ mod unit;
 
 pub use unit::Unit;
 
-use serde::Deserialize;
+use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Serialize, Deserialize)]
 pub struct Units {
     #[serde(rename = "Unit")]
-    data: Vec<Unit>,
+    pub data: Vec<Unit>,
 }
 
 impl Units {
@@ -15,6 +15,7 @@ impl Units {
         toml::from_slice(include_bytes!("../../../assets/data/Units.toml"))
             .expect("failed to load units")
     }
+
     pub fn get(&self, id: &str) -> Unit {
         if id.is_empty() {
             return Unit::unavailable();

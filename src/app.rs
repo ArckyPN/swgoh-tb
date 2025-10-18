@@ -225,10 +225,11 @@ impl App {
             for omicron in omicrons {
                 let unit = self.units.get(&omicron.unit);
                 for omi in &omicron.omis {
+                    let ability = unit.get_omicron(&omi.to_id());
                     ui.label(
                         egui::RichText::new(format!(
                             "\t- {}: {} \"{}\"",
-                            unit.name, omi, "# TODO ability name"
+                            unit.name, omi, ability.name
                         ))
                         .size(size),
                     );

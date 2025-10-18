@@ -1,6 +1,6 @@
 use std::fmt::Display;
 
-use serde::Deserialize;
+use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Deserialize, Clone, Hash)]
 pub struct Omicrons {
@@ -10,12 +10,23 @@ pub struct Omicrons {
     pub omis: Vec<Omicron>,
 }
 
-#[derive(Debug, Clone, Hash)]
+#[derive(Debug, Clone, Hash, Serialize)]
 pub enum Omicron {
     Basic,
     Special(u8),
     Lead,
     Unique(u8),
+}
+
+impl Omicron {
+    pub fn to_id(&self) -> String {
+        match self {
+            Self::Basic => "b".to_owned(),
+            Self::Lead => "l".to_owned(),
+            Self::Special(s) => format!("s{s}"),
+            Self::Unique(u) => format!("u{u}"),
+        }
+    }
 }
 
 impl Display for Omicron {
@@ -52,4 +63,10 @@ impl<'de> Deserialize<'de> for Omicron {
             _ => Err(serde::de::Error::custom("invalid ability variant")),
         }
     }
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct Ability {
+    pub id: String,
+    pub name: String,
 }
