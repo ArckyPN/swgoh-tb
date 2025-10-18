@@ -389,36 +389,6 @@ impl App {
                     }
                 });
             });
-
-            /* // starting lineup
-            for starting in team.by_ref() {
-                self.render_unit(
-                    ui,
-                    &starting,
-                    self.character_icon_size() * STARTING_LINEUP_FACTOR,
-                    None,
-                );
-                missing -= 1;
-                if missing == 4 {
-                    break;
-                }
-            }
-
-            // reinforcements
-            ui.vertical(|ui| {
-                ui.label(egui::RichText::new("Reinforcements").size(self.unit_font_size()));
-                ui.horizontal(|ui| {
-                    for reinforcement in team {
-                        self.render_unit(
-                            ui,
-                            &reinforcement,
-                            self.character_icon_size() * REINFORCEMENT_FACTOR,
-                            None,
-                        );
-                        missing -= 1;
-                    }
-                });
-            }); */
         });
 
         missing
