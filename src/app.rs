@@ -6,7 +6,7 @@ use egui_commonmark::{CommonMarkCache, CommonMarkViewer};
 
 use crate::{Mission, Omicron, Omicrons, Planet, Resolution, Tab, Teams, Unit, Units, Video};
 
-const CAPITAL_SHIP_FACTOR: f32 = 1.1;
+const CAPITAL_SHIP_FACTOR: f32 = 1.5;
 const STARTING_LINEUP_FACTOR: f32 = 0.9;
 const REINFORCEMENT_FACTOR: f32 = 0.8;
 
@@ -355,7 +355,42 @@ impl App {
             );
             missing -= 1;
 
-            // starting lineup
+            ui.vertical(|ui| {
+                // starting lineup
+                ui.label(egui::RichText::new("Starting Lineup").size(self.unit_font_size()));
+                ui.horizontal(|ui| {
+                    for starting in team.by_ref() {
+                        self.render_unit(
+                            ui,
+                            &starting,
+                            self.character_icon_size() * STARTING_LINEUP_FACTOR,
+                            None,
+                        );
+                        missing -= 1;
+                        if missing == 4 {
+                            break;
+                        }
+                    }
+                });
+
+                ui.separator();
+
+                // reinforcements
+                ui.label(egui::RichText::new("Reinforcements").size(self.unit_font_size()));
+                ui.horizontal(|ui| {
+                    for reinforcement in team {
+                        self.render_unit(
+                            ui,
+                            &reinforcement,
+                            self.character_icon_size() * REINFORCEMENT_FACTOR,
+                            None,
+                        );
+                        missing -= 1;
+                    }
+                });
+            });
+
+            /* // starting lineup
             for starting in team.by_ref() {
                 self.render_unit(
                     ui,
@@ -383,7 +418,7 @@ impl App {
                         missing -= 1;
                     }
                 });
-            });
+            }); */
         });
 
         missing
